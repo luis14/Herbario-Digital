@@ -1,0 +1,34 @@
+header {
+  height:100px;
+}
+
+.navbar.navbar-default {
+  height:70px;
+}
+
+.nav.navbar-nav {
+  height:70px;
+}
+
+.navbar-brand.navbar-link {
+  height:70px;
+}
+
+.nav.navbar-nav li {
+  height:70px;
+}
+
+.nav.navbar-nav a {
+  height:70px;
+  padding-top:40px;
+}
+
+.navbar-text.navbar-right {
+  height:160px;
+  padding-top:45px;
+}
+
+.btn.btn-default.action-button {
+  margin-right:10px;
+}
+

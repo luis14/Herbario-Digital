@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Herbario Digital</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/imageList.css">
+    <link rel="stylesheet" href="assets/css/Map-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Chunky.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="modal fade" role="dialog" tabindex="-1" id="imgCompare">
+        <div class="modal-dialog modal-lg" role="document" id="modalXL">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 panzoom" id="zoom1"><img class="img-responsive" src="assets/img/empty.png" height="500px">
+                            <button class="btn btn-default btn-sm pull-left zoom-out" type="button"> <i class="glyphicon glyphicon-minus"></i></button>
+                            <button class="btn btn-default btn-sm pull-right zoom-in" type="button"> <i class="glyphicon glyphicon-plus"></i></button>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 panzoom" id="zoom1"><img class="img-responsive" src="assets/img/empty.png" height="500px">
+                            <button class="btn btn-default btn-sm pull-left zoom-out" type="button"> <i class="glyphicon glyphicon-minus"></i></button>
+                            <button class="btn btn-default btn-sm pull-right zoom-in" type="button"> <i class="glyphicon glyphicon-plus"></i></button>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 panzoom" id="zoom1"><img class="img-responsive" src="assets/img/empty.png" height="500px">
+                            <button class="btn btn-default btn-sm pull-left zoom-out" type="button"> <i class="glyphicon glyphicon-minus"></i></button>
+                            <button class="btn btn-default btn-sm pull-right zoom-in" type="button"> <i class="glyphicon glyphicon-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Brand</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation"><a href="busquedaMuestra.html">Muestras </a></li>
+                    <li class="active" role="presentation"><a href="especies.html">Especies </a></li>
+                    <li role="presentation"><a href="glosario.html">Glosario </a></li>
+                    <li role="presentation"><a href="contratacion.html">Contratación </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb" style="border-bottom-width:1px;">
+                    <li><a><span>Catálogo de especies</span></a></li>
+                    <li><a><span>Ficha botánica</span></a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <h4 class="text-left">Saurauia floccifera Triana Pland</h4>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Clasificación </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Familia </td>
+                                    <td>ACTINIDIACEAE</td>
+                                </tr>
+                                <tr>
+                                    <td>Género </td>
+                                    <td>Saurauia </td>
+                                </tr>
+                                <tr>
+                                    <td>Nombre científico</td>
+                                    <td>Saurauia floccifera Triana Pland</td>
+                                </tr>
+                                <tr>
+                                    <td>Nombre común</td>
+                                    <td>Moquillo </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Descripción </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> Lorem ipsum dolor sit amet, consectetur adipiscingelit. Nulla quis volutpat augue. Sed ut auctor urna.Quisque eu dui facilisis, finibus lectus non, vulputatemi finibus lectus. Etiam volutpat condimentum commodo. Morbiinterdum
+                                        nisi quis urna aliquam, in lobortis dolorlacinia. Suspendisse luctus felis eget augue congueporttitor enim aliquet. &nbsp; &nbsp;&nbsp; </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <button class="btn btn-info pull-right" type="button" data-toggle="modal" data-target="#imgCompare">Comparar </button>
+                    <div>
+                        <ul class="nav nav-tabs">
+                            <li><a href="#tab-1" role="tab" data-toggle="tab">Características </a></li>
+                            <li class="active"><a href="#tab-2" role="tab" data-toggle="tab">Muestras </a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane" role="tabpanel" id="tab-1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <br/>
+<br/>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
+                                            <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h4 class="text-nowrap">Característica </h4></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12"><em>Resumen </em></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
+                                            <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h4 class="text-nowrap">Característica </h4></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12"><em>Resumen </em></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
+                                            <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h4 class="text-nowrap">Característica </h4></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12"><em>Resumen </em></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
+                                            <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h4 class="text-nowrap">Característica </h4></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12"><em>Resumen </em></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5>Fotografías de muestra verde</h5></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.46.13 PM-1.jpeg"></div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.46.13 PM-1.jpeg"></div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.46.13 PM-1.jpeg"></div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.46.13 PM-1.jpeg"></div>
+                                        </div>
+                                        <div class="row">
+                                            <br/>
+<br/>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.46.13 PM-1.jpeg"></div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.46.13 PM-1.jpeg"></div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.46.13 PM-1.jpeg"></div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.46.13 PM-1.jpeg"></div>
+                                        </div>
+                                        <div class="row">
+                                            <br/>
+<br/>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5>Mapa de distribución</h5></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmuk3onNrslpzRdayt2bzUUSsj3bjCFTM&callback=initMap"></script>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane active" role="tabpanel" id="tab-2">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="dropdown pull-right" style="margin-top:10px;">
+                                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-bottom:5px;">Ordenar por <span class="caret"></span></button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li role="presentation"><a href="#">First Item</a></li>
+                                                <li role="presentation"><a href="#">Second Item</a></li>
+                                                <li role="presentation"><a href="#">Third Item</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item">
+                                        <label class="image-checkbox">
+  <img class="img-responsive" src="assets/img//WhatsApp Image 2017-12-06 at 8.45.50 PM.jpeg" />
+  <input type="checkbox" name="image[]" value="" />
+  <i class="fa fa-check hidden"></i>
+</label>
+                                        <h5 class="text-center"># ejecutivo - fecha</h5></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item">
+                                        <label class="image-checkbox">
+  <img class="img-responsive" src="assets/img//WhatsApp Image 2017-12-06 at 8.45.50 PM.jpeg" />
+  <input type="checkbox" name="image[]" value="" />
+  <i class="fa fa-check hidden"></i>
+</label>
+                                        <h5 class="text-center"># ejecutivo - fecha</h5></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item">
+                                        <label class="image-checkbox">
+  <img class="img-responsive" src="assets/img//WhatsApp Image 2017-12-06 at 8.45.50 PM.jpeg" />
+  <input type="checkbox" name="image[]" value="" />
+  <i class="fa fa-check hidden"></i>
+</label>
+                                        <h5 class="text-center"># ejecutivo - fecha</h5></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item">
+                                        <label class="image-checkbox">
+  <img class="img-responsive" src="assets/img//WhatsApp Image 2017-12-06 at 8.45.50 PM.jpeg" />
+  <input type="checkbox" name="image[]" value="" />
+  <i class="fa fa-check hidden"></i>
+</label>
+                                        <h5 class="text-center"># ejecutivo - fecha</h5></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item">
+                                        <label class="image-checkbox">
+  <img class="img-responsive" src="assets/img//WhatsApp Image 2017-12-06 at 8.45.50 PM.jpeg" />
+  <input type="checkbox" name="image[]" value="" />
+  <i class="fa fa-check hidden"></i>
+</label>
+                                        <h5 class="text-center"># ejecutivo - fecha</h5></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item">
+                                        <label class="image-checkbox">
+  <img class="img-responsive" src="assets/img//WhatsApp Image 2017-12-06 at 8.45.50 PM.jpeg" />
+  <input type="checkbox" name="image[]" value="" />
+  <i class="fa fa-check hidden"></i>
+</label>
+                                        <h5 class="text-center"># ejecutivo - fecha</h5></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item">
+                                        <label class="image-checkbox">
+  <img class="img-responsive" src="assets/img//WhatsApp Image 2017-12-06 at 8.45.50 PM.jpeg" />
+  <input type="checkbox" name="image[]" value="" />
+  <i class="fa fa-check hidden"></i>
+</label>
+                                        <h5 class="text-center"># ejecutivo - fecha</h5></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item">
+                                        <label class="image-checkbox">
+  <img class="img-responsive" src="assets/img//WhatsApp Image 2017-12-06 at 8.45.50 PM.jpeg" />
+  <input type="checkbox" name="image[]" value="" />
+  <i class="fa fa-check hidden"></i>
+</label>
+                                        <h5 class="text-center"># ejecutivo - fecha</h5></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item">
+                                        <label class="image-checkbox">
+  <img class="img-responsive" src="assets/img//WhatsApp Image 2017-12-06 at 8.45.50 PM.jpeg" />
+  <input type="checkbox" name="image[]" value="" />
+  <i class="fa fa-check hidden"></i>
+</label>
+                                        <h5 class="text-center"># ejecutivo - fecha</h5></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/imageController.js"></script>
+    <script src="assets/js/jquery.panzoom.js"></script>
+    <script src="assets/js/mapController.js"></script>
+</body>
+
+</html>
