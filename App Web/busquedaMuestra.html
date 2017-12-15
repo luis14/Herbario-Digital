@@ -46,8 +46,13 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-3 col-xs-1"></div>
                 <div class="col-lg-6 col-md-4 col-sm-6 col-xs-10">
-                    <input type="text" style="width:100%;height:60px;">
+                    <div class="input-group">
+                        <input type="search" class="form-control" style="width:100%;height:60px;font-size:17px;padding: 10px;" placeholder=" Buscar por familia, género, nombre común o científico">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    </div>
                 </div>
+
+
                 <div class="col-lg-3 col-md-4 col-sm-3 col-xs-1"></div>
             </div>
             <div class="row" style="margin-top:2%;">
@@ -58,11 +63,12 @@
                             <h4 class="text-right">Buscar por:</h4></div>
                         <div class="col-md-6">
                             <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Seleccione una opción<span class="caret"></span></button>
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Seleccionar <span class="caret"></span></button>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li role="presentation"><a href="#">First Item</a></li>
-                                    <li role="presentation"><a href="#">Second Item</a></li>
-                                    <li role="presentation"><a href="#">Third Item</a></li>
+                                    <li role="presentation"><a href="#">Familia</a></li>
+                                    <li role="presentation"><a href="#">Género</a></li>
+                                    <li role="presentation"><a href="#">Nombre común</a></li>
+                                    <li role="presentation"><a href="#">Nombre científico</a></li>
                                 </ul>
                             </div>
                         </div>

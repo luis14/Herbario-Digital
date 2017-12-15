@@ -31,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <ol class="breadcrumb" style="border-bottom-width:1px;">
@@ -41,14 +41,14 @@
         </div>
     </div>
     <div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4 col-md-3 col-sm-3 col-xs-4">
-                    <h3>Filtrar especies</h3>
-                    <div class="panel-group" role="tablist" aria-multiselectable="true" id="accordion-2">
+                <div class="col-lg-3 col-md-2 col-sm-3 col-xs-4">
+                    <h4>Filtrar especies</h4>
+                    <div class="panel-group" role="tablist" aria-multiselectable="true" id="accordion-4">
                         <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-1" class="title">Ubicación</a></h4></div>
+                            <div class="panel-heading" role="tab" data-toggle="collapse" data-parent="#accordion-4" aria-expanded="false" href="#accordion-4 .item-1">
+                                <h4 class="panel-title"><i class="glyphicon glyphicon-chevron-right"></i><a role="button" data-toggle="collapse" data-parent="#accordion-4" aria-expanded="false" href="#accordion-4 .item-1" class="title">Ubicación</a></h4></div>
                             <div class="panel-collapse collapse item-1" role="tabpanel">
                                 <div class="panel-body">
                                     <div class="checkbox">
@@ -75,8 +75,8 @@
                             </div>
                         </div>
                         <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-2" class="title">Procedencia </a></h4></div>
+                            <div class="panel-heading" role="tab" data-toggle="collapse" data-parent="#accordion-4" aria-expanded="false" href="#accordion-4 .item-2">
+                                <h4 class="panel-title"><i class="glyphicon glyphicon-chevron-right"></i><a role="button" data-toggle="collapse" data-parent="#accordion-4" aria-expanded="false" href="#accordion-4 .item-2" class="title">Procedencia </a></h4></div>
                             <div class="panel-collapse collapse item-2" role="tabpanel">
                                 <div class="panel-body">
                                     <div class="checkbox">
@@ -103,8 +103,8 @@
                             </div>
                         </div>
                         <div class="panel panel-default">
-                            <div class="panel-heading" role="tab">
-                                <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-3" class="title">Posición de la hoja</a></h4></div>
+                            <div class="panel-heading" role="tab" data-toggle="collapse" data-parent="#accordion-4" aria-expanded="false" href="#accordion-4 .item-3">
+                                <h4 class="panel-title"><i class="glyphicon glyphicon-chevron-right"></i><a role="button" data-toggle="collapse" data-parent="#accordion-4" aria-expanded="false" href="#accordion-4 .item-3" class="title">Posición de la hoja</a></h4></div>
                             <div class="panel-collapse collapse item-3" role="tabpanel">
                                 <div class="panel-body">
                                     <div class="checkbox">
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-9 col-sm-9 col-xs-8">
+                <div class="col-lg-9 col-md-10 col-sm-9 col-xs-8">
                     <button class="btn btn-info pull-right" type="button" data-toggle="modal" data-target="#comparativeTable">Comparar </button>
                     <div>
                         <ul class="nav nav-tabs">
@@ -140,97 +140,121 @@
                             <li><a href="#tab-2" role="tab" data-toggle="tab">Género </a></li>
                             <li><a href="#tab-3" role="tab" data-toggle="tab">Especie </a></li>
                         </ul>
-                        <div class="tab-content">
+                        <div class="tab-content" style="
+    border-width:  1px;
+    border-color: #dddddd;
+    border-bottom-style: solid;
+    border-left-style:  solid;
+    border-right-style:  solid;
+">
                             <div class="tab-pane active" role="tabpanel" id="tab-1">
                                 <div class="panel-group" role="tablist" aria-multiselectable="true" id="accordion-1">
                                     <div class="panel panel-default panel-list">
-                                        <div class="panel-heading" role="tab">
-                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-1"> </a><input type="checkbox" />
-<a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-1" class="title">ACANTHACEAE
-<span class="badge">42</span>
-</a>
-</h4></div>
+
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-1" >
+                                            <h4 class="panel-title">
+                                                <input type="checkbox"/>
+                                                <i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-1" class="title">ALISMATACEAE
+                                                        <span class="badge">26</span>
+                                                    </a>
+                                                </h4>
+                                            </div>
                                         <div class="panel-collapse collapse item-1" role="tabpanel">
-                                            <div class="panel-body">
+                                            <div class="panel-body panel-hidden">
                                                 <ul class="list-group">
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="panel panel-default panel-list">
-                                        <div class="panel-heading" role="tab">
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-2">
                                             <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-2"> </a><input type="checkbox" />
-<a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-2" class="title">ACANTHACEAE
-<span class="badge">42</span>
+                                                <i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+<a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-2" class="title">ALISMATACEAE
+<span class="badge">123</span>
 </a>
 </h4></div>
                                         <div class="panel-collapse collapse item-2" role="tabpanel">
-                                            <div class="panel-body">
+                                            <div class="panel-body panel-hidden">
                                                 <ul class="list-group">
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -238,46 +262,52 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default panel-list">
-                                        <div class="panel-heading" role="tab">
-                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-3"> </a><input type="checkbox" />
-<a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-3" class="title">ACANTHACEAE
-<span class="badge">42</span>
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-3">
+                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-3"> </a><input type="checkbox" /><i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+<a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-3" class="title">ACTINIDIACEAE
+<span class="badge">43</span>
 </a>
 </h4></div>
                                         <div class="panel-collapse collapse item-3" role="tabpanel">
-                                            <div class="panel-body">
+                                            <div class="panel-body panel-hidden">
                                                 <ul class="list-group">
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -285,46 +315,52 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default panel-list">
-                                        <div class="panel-heading" role="tab">
-                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-4"> </a><input type="checkbox" />
-<a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-4" class="title">ACANTHACEAE
-<span class="badge">42</span>
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-4">
+                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-4"> </a><input type="checkbox" /><i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+<a role="button" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" href="#accordion-1 .item-4" class="title">ACTINIDIACEAE
+<span class="badge">13</span>
 </a>
 </h4></div>
                                         <div class="panel-collapse collapse item-4" role="tabpanel">
-                                            <div class="panel-body">
+                                            <div class="panel-body panel-hidden">
                                                 <ul class="list-group">
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="row">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
-                                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                                                                <blockquote>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                                    <footer>Nombre Común</footer>
-                                                                </blockquote>
-                                                            </div>
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -334,10 +370,448 @@
                                 </div>
                             </div>
                             <div class="tab-pane" role="tabpanel" id="tab-2">
-                                <p>Second tab content.</p>
+                                <div class="panel-group" role="tablist" aria-multiselectable="true" id="accordion-2">
+                                    <div class="panel panel-default panel-list">
+
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-1" >
+                                            <h4 class="panel-title">
+                                                <input type="checkbox"/>
+                                                <i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-1" class="title">ACTINIDIACEAE
+                                                        <span class="badge">18</span>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        <div class="panel-collapse collapse item-1" role="tabpanel">
+                                            <div class="panel-body panel-hidden">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default panel-list">
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-2">
+                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-2"> </a><input type="checkbox" />
+                                                <i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+<a role="button" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-2" class="title">ACTINIDIACEAE
+<span class="badge">13</span>
+</a>
+</h4></div>
+                                        <div class="panel-collapse collapse item-2" role="tabpanel">
+                                            <div class="panel-body panel-hidden">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default panel-list">
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-3">
+                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-3"> </a><input type="checkbox" /><i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+<a role="button" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-3" class="title">ACTINIDIACEAE
+<span class="badge">8</span>
+</a>
+</h4></div>
+                                        <div class="panel-collapse collapse item-3" role="tabpanel">
+                                            <div class="panel-body panel-hidden">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default panel-list">
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-4">
+                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-4"> </a><input type="checkbox" /><i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+<a role="button" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" href="#accordion-2 .item-4" class="title">ACTINIDIACEAE
+<span class="badge">13</span>
+</a>
+</h4></div>
+                                        <div class="panel-collapse collapse item-4" role="tabpanel">
+                                            <div class="panel-body panel-hidden">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="tab-pane" role="tabpanel" id="tab-3">
-                                <p>Third tab content.</p>
+                                <div class="panel-group" role="tablist" aria-multiselectable="true" id="accordion-3">
+                                    <div class="panel panel-default panel-list">
+
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-1" >
+                                            <h4 class="panel-title">
+                                                <input type="checkbox"/>
+                                                <i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-1" class="title">ACTINIDIACEAE
+                                                        <span class="badge">36</span>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        <div class="panel-collapse collapse item-1" role="tabpanel">
+                                            <div class="panel-body panel-hidden">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default panel-list">
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-2">
+                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-2"> </a><input type="checkbox" />
+                                                <i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+<a role="button" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-2" class="title">ACTINIDIACEAE
+<span class="badge">11</span>
+</a>
+</h4></div>
+                                        <div class="panel-collapse collapse item-2" role="tabpanel">
+                                            <div class="panel-body panel-hidden">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default panel-list">
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-3">
+                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-3"> </a><input type="checkbox" /><i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+<a role="button" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-3" class="title">ACTINIDIACEAE
+<span class="badge">96</span>
+</a>
+</h4></div>
+                                        <div class="panel-collapse collapse item-3" role="tabpanel">
+                                            <div class="panel-body panel-hidden">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default panel-list">
+                                        <div class="panel-heading panel-heading-line-bottom" role="tab" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-4">
+                                            <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-4"> </a><input type="checkbox" /><i class="glyphicon glyphicon-chevron-right" id="iconLista"></i>
+<a role="button" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" href="#accordion-3 .item-4" class="title">ACTINIDIACEAE
+<span class="badge">13</span>
+</a>
+</h4></div>
+                                        <div class="panel-collapse collapse item-4" role="tabpanel">
+                                            <div class="panel-body panel-hidden">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <a href="fichabotanica.html">
+                                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="90" height="100"></div>
+                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                                                                    <blockquote>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                        <footer>Nombre Común</footer>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -365,79 +839,79 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Procedencia <i class="fa fa-map-marker"></i></td>
+                                        <td><i class="fa fa-map-marker"></i> Procedencia</td>
                                         <td>endemica </td>
                                         <td>endemica </td>
                                         <td>externa </td>
                                     </tr>
                                     <tr>
-                                        <td>Ubicación <i class="fa fa-map-marker"></i></td>
+                                        <td><i class="fa fa-map-marker"></i>  Ubicación </td>
                                         <td>AC Osa</td>
                                         <td>AC Pacifico Central</td>
                                         <td>AC Pacifico Central</td>
                                     </tr>
                                     <tr>
-                                        <td>Tipo de Hoja<i class="glyphicon glyphicon-leaf"></i></td>
+                                        <td><i class="glyphicon glyphicon-leaf"></i>  Tipo de Hoja</td>
                                         <td>simples </td>
                                         <td>simples </td>
                                         <td>simples </td>
                                     </tr>
                                     <tr>
-                                        <td>Posición de la hoja<i class="glyphicon glyphicon-leaf"></i></td>
+                                        <td><i class="glyphicon glyphicon-leaf"></i>  Posición de la hoja</td>
                                         <td>alternas </td>
                                         <td>alternas </td>
                                         <td>alternas </td>
                                     </tr>
                                     <tr>
-                                        <td>Forma de la hoja<i class="glyphicon glyphicon-leaf"></i></td>
+                                        <td><i class="glyphicon glyphicon-leaf"></i>  Forma de la hoja</td>
                                         <td>lanceolada </td>
                                         <td>lineal </td>
                                         <td>lanceolada </td>
                                     </tr>
                                     <tr>
-                                        <td>Borde de la hoja<i class="glyphicon glyphicon-leaf"></i></td>
+                                        <td><i class="glyphicon glyphicon-leaf"></i>  Borde de la hoja</td>
                                         <td>aserrada </td>
                                         <td>aserrada </td>
                                         <td>aserrada </td>
                                     </tr>
                                     <tr>
-                                        <td>Posee savia<i class="glyphicon glyphicon-leaf"></i></td>
+                                        <td><i class="glyphicon glyphicon-leaf"></i>  Posee savia</td>
                                         <td>si </td>
                                         <td>si </td>
                                         <td>no </td>
                                     </tr>
                                     <tr>
-                                        <td>Color de la savia<i class="glyphicon glyphicon-leaf"></i></td>
+                                        <td><i class="glyphicon glyphicon-leaf"></i>  Color de la savia</td>
                                         <td>incolora </td>
                                         <td>incolora </td>
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td>Textura de la savia<i class="glyphicon glyphicon-leaf"></i></td>
+                                        <td><i class="glyphicon glyphicon-leaf"></i>  Textura de la savia</td>
                                         <td>mucilaginosa</td>
                                         <td>mucilaginosa </td>
                                         <td> </td>
                                     </tr>
                                     <tr>
-                                        <td>Posee pubescencia<i class="glyphicon glyphicon-leaf"></i></td>
+                                        <td><i class="glyphicon glyphicon-leaf"></i>  Posee pubescencia</td>
                                         <td>si </td>
                                         <td>si </td>
                                         <td>si </td>
                                     </tr>
                                     <tr>
-                                        <td>Posee yemas florales<i class="glyphicon glyphicon-leaf"></i></td>
+                                        <td><i class="glyphicon glyphicon-leaf"></i>  Posee yemas florales</td>
                                         <td>si </td>
                                         <td>no </td>
                                         <td>si </td>
                                     </tr>
                                     <tr>
-                                        <td>Color de la flor<i class="icon ion-ios-flower-outline"></i></td>
+                                        <td><i class="icon ion-ios-flower-outline"></i>  Color de la flor</td>
                                         <td>blanca </td>
                                         <td>blanca </td>
                                         <td>blanca </td>
                                     </tr>
                                     <tr>
-                                        <td>Simetría de la flor<i class="icon ion-ios-flower-outline"></i></td>
+                                        <td><i class="icon ion-ios-flower-outline"></i>  Simetría de la flor</td>
                                         <td>radial </td>
                                         <td>radial </td>
                                         <td>radial </td>
@@ -454,10 +928,8 @@
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/especiesController.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/imageController.js"></script>
-    <script src="assets/js/jquery.panzoom.js"></script>
-    <script src="assets/js/mapController.js"></script>
 </body>
 
 </html>
