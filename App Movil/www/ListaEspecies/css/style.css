@@ -4,6 +4,13 @@
 	margin-top: 1.5em;
 }
 /*----*/
+.asText {
+color: #FFF;
+background:none;
+border:none;
+margin:0;
+padding:0;
+}
 .user-profile1{
 	background: #FFF;
 	padding: 3em 1em 2em 1em;
