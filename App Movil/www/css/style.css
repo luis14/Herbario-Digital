@@ -259,10 +259,11 @@ ul.sub li a:hover{
 	 -o-transition:0.5s all;
 	 -ms-transition:0.5s all;
 }
-.sign-in-box input[type="submit"]:hover{
+.sign-in-box input[type="button"]:hover{
 	background: #475965;
 	color: #FFF;
 }
+
 .text-boxs{
 	margin:2em 0;
 }
@@ -492,7 +493,7 @@ ul.sub li a:hover{
 	outline: none;
 	width: 68.6%;
 }
-.msg-type-box input[type="submit"]{
+.msg-type-box input[type="button"]{
 	color: #53646D;
 	font-size: 1em;
 	background: url(../images/send-bg.png) no-repeat 0px 0px;
@@ -609,7 +610,7 @@ ul.sub li a:hover{
 	min-height:120px;
 	resize:none;
 }
-.get-in-touch-text-boxs input[type="submit"]{
+.get-in-touch-text-boxs input[type="button"]{
 	background:#21B8C6;
 	color:#FFF;
 	padding:0.7em;
@@ -631,7 +632,7 @@ ul.sub li a:hover{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
-.get-in-touch-text-boxs input[type="submit"]:hover{
+.get-in-touch-text-boxs input[type="button"]:hover{
 	background: #475965;
 	color: #FFF;
 }
