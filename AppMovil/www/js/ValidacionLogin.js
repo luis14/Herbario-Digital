@@ -54,8 +54,7 @@
                         alert("Contrasena o correo invalidos");
                         return false
                     } else {
-                        alert('Bienvenido');
-                        return true
+                        window.location.replace("registro/registro.html");
 
                     }
                   },

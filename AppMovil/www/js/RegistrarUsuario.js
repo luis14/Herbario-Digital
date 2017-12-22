@@ -65,7 +65,6 @@
                 username: email,
             },
             success: function(response) {
-                alert(response);
                 if (response != 0){
                     alert('Correo ya esta registrado');
                     return false;
@@ -82,7 +81,7 @@
                      contrasena: contrasena,
                   },
                   success: function(response) {
-                    alert('Se ha registrado exitosamente');
+                    window.location.replace("registro/registro.html");
                   },
                   error: function(xhr) {
                     alert('Error al registrar')
