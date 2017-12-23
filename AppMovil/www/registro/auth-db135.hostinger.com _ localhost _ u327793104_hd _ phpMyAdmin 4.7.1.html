@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)https://auth-db135.hostinger.com/db_routines.php?server=1&db=u327793104_hd&type=PROCEDURE -->
+<html lang="es" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="icon" href="https://auth-db135.hostinger.com/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="https://auth-db135.hostinger.com/favicon.ico" type="image/x-icon"><link rel="stylesheet" type="text/css" href="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/jquery-ui.css"><link rel="stylesheet" type="text/css" href="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/codemirror.css"><link rel="stylesheet" type="text/css" href="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/show-hint.css"><link rel="stylesheet" type="text/css" href="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/lint.css"><link rel="stylesheet" type="text/css" href="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/phpmyadmin.css.php"><link rel="stylesheet" type="text/css" href="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/printview.css" media="print" id="printcss"><title>auth-db135.hostinger.com / localhost / u327793104_hd | phpMyAdmin 4.7.1</title><script data-cfasync="false" type="text/javascript" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/get_scripts.js.php"></script><script data-cfasync="false" type="text/javascript" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/get_scripts.js(1).php"></script><script data-cfasync="false" type="text/javascript" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/get_scripts.js(2).php"></script><script data-cfasync="false" type="text/javascript" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/get_scripts.js(3).php"></script><script data-cfasync="false" type="text/javascript" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/whitelist.php"></script><script data-cfasync="false" type="text/javascript" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/messages.php"></script><script data-cfasync="false" type="text/javascript" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/get_image.js.php"></script><script data-cfasync="false" type="text/javascript">// <![CDATA[
+PMA_commonParams.setAll({common_query:"",opendb_url:"db_structure.php",collation_connection:"utf8mb4_unicode_ci",lang:"es",server:"1",table:"",db:"",token:"6f7e49fa3b8fc74cb35c33ac486f1b4a",text_dir:"ltr",show_databases_navigation_as_tree:"1",pma_text_default_tab:"Examinar",pma_text_left_default_tab:"Estructura",pma_text_left_default_tab2:"",LimitChars:"50",pftext:"",confirm:"1",LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:"1",PMA_VERSION:"4.7.1",auth_type:"signon",user:"u327793104_hd"});
+ConsoleEnterExecutes=false
+AJAX.scriptHandler.add("jquery/jquery.min.js",0).add("jquery/jquery-migrate-3.0.0.js",0).add("whitelist.php?lang=es&amp;db=",1).add("sprintf.js",1).add("ajax.js",0).add("keyhandler.js",1).add("jquery/jquery-ui.min.js",0).add("jquery/jquery.cookie.js",0).add("jquery/jquery.mousewheel.js",0).add("jquery/jquery.event.drag-2.2.js",0).add("jquery/jquery-ui-timepicker-addon.js",0).add("jquery/jquery.ba-hashchange-1.3.js",0).add("jquery/jquery.debounce-1.0.5.js",0).add("menu-resizer.js",1).add("cross_framing_protection.js",0).add("rte.js",1).add("tracekit/tracekit.js",1).add("error_report.js",1).add("messages.php?lang=es&amp;db=",0).add("get_image.js.php?theme=pmahomme",0).add("config.js",1).add("doclinks.js",1).add("functions.js",1).add("navigation.js",1).add("indexes.js",1).add("common.js",1).add("page_settings.js",1).add("shortcuts_handler.js",1).add("codemirror/lib/codemirror.js",0).add("codemirror/mode/sql/sql.js",0).add("codemirror/addon/runmode/runmode.js",0).add("codemirror/addon/hint/show-hint.js",0).add("codemirror/addon/hint/sql-hint.js",0).add("codemirror/addon/lint/lint.js",0).add("codemirror/addon/lint/sql-lint.js",0).add("console.js",1);
+$(function() {AJAX.fireOnload("whitelist.php?lang=es&amp;db=");AJAX.fireOnload("sprintf.js");AJAX.fireOnload("keyhandler.js");AJAX.fireOnload("menu-resizer.js");AJAX.fireOnload("rte.js");AJAX.fireOnload("tracekit/tracekit.js");AJAX.fireOnload("error_report.js");AJAX.fireOnload("config.js");AJAX.fireOnload("doclinks.js");AJAX.fireOnload("functions.js");AJAX.fireOnload("navigation.js");AJAX.fireOnload("indexes.js");AJAX.fireOnload("common.js");AJAX.fireOnload("page_settings.js");AJAX.fireOnload("shortcuts_handler.js");AJAX.fireOnload("console.js");});
+// ]]></script><noscript>&lt;style&gt;html{display:block}&lt;/style&gt;</noscript><script type="text/javascript" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/get_scripts.js(4).php"></script><script type="text/javascript" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/get_scripts.js(5).php"></script></head><body style="margin-bottom: 18px; padding-top: 58.5625px; cursor: inherit;"><div id="pma_navigation"><div id="pma_navigation_resizer"></div><div id="pma_navigation_collapser">←</div><div id="pma_navigation_content"><div id="pma_navigation_header"><a class="hide navigation_url" href="https://auth-db135.hostinger.com/navigation.php?ajax_request=1"></a><!-- LOGO START -->
+<div id="pmalogo">
+            <a href="https://auth-db135.hostinger.com/index.php">
+        <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/logo_left.png" alt="phpMyAdmin" id="imgpmalogo">            </a>
+    </div>
+<!-- LOGO END --><!-- LINKS START --><div id="navipanellinks"><a href="https://auth-db135.hostinger.com/index.php" title="Página de inicio"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Página de inicio" alt="Página de inicio" class="icon ic_b_home"></a><a href="https://auth-db135.hostinger.com/logout.php?db=" class="logout disableAjax" title="Finalizar sesión"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Finalizar sesión" alt="Finalizar sesión" class="icon ic_s_loggoff"></a><a href="https://auth-db135.hostinger.com/doc/html/index.html" target="documentation" title="Documentación de phpMyAdmin"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación de phpMyAdmin" alt="Documentación de phpMyAdmin" class="icon ic_b_docs"></a><a href="https://auth-db135.hostinger.com/url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Findex.html" target="mysql_doc" title="Documentación"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_sqlhelp"></a><a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#" id="pma_navigation_settings_icon" title="Ajustes del panel de navegación"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ajustes del panel de navegación" alt="Ajustes del panel de navegación" class="icon ic_s_cog"></a><a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#" id="pma_navigation_reload" title="Recargar el panel de navegación"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Recargar el panel de navegación" alt="Recargar el panel de navegación" class="icon ic_s_reload"></a></div><!-- LINKS ENDS --><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/ajax_clock_small.gif" title="Cargando…" alt="Cargando…" style="visibility: hidden; display:none" class="throbber"></div><div id="pma_navigation_tree" class="list_container synced highlight" style="height: 627px;"><div class="pma_quick_warp"><div class="drop_list"><span title="Tablas recientes" class="drop_button">Reciente</span><ul id="pma_recent_list"><li class="warp_link"><a href="https://auth-db135.hostinger.com/tbl_recent_favorite.php?db=u327793104_hd&amp;table=USUARIO">`u327793104_hd`.`USUARIO`</a></li></ul></div><div class="drop_list"><span title="Tablas favoritas" class="drop_button">Favoritas</span><ul id="pma_favorite_list"><li class="warp_link">No existen tablas favoritas.</li></ul></div><div class="clearfloat"></div></div><div class="clearfloat"></div><ul><!-- CONTROLS START --><li id="navigation_controls_outer"><div id="navigation_controls"><a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#" id="pma_navigation_collapse" title="Colapsar todos"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/s_collapseall.png" title="Colapsar todos" alt="Colapsar todos"></a><a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#" id="pma_navigation_sync" title="Deshacer enlace en el panel principal"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Deshacer enlace en el panel principal" alt="Deshacer enlace en el panel principal" class="icon ic_s_link"></a></div></li><!-- CONTROLS ENDS --></ul><div id="pma_navigation_tree_content" style="height: 582px;"><ul><li class="first new_database italics"><div class="block"><i class="first"></i></div><div class="block "><a href="https://auth-db135.hostinger.com/server_databases.php?server=1"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_b_newdb"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/server_databases.php?server=1" title="">Nueva</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class="hide vPath">cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class="hide pos">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/db_operations.php?server=1&amp;db=information_schema&amp;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Opciones de la base de datos" alt="Opciones de la base de datos" class="icon ic_s_db"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/db_structure.php?server=1&amp;db=information_schema" title="Estructura">information_schema</a><div class="clearfloat"></div></li><li class="last database selected"><div class="block"><i></i><a class="expander loaded" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==</span><span class="hide pos">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_b_minus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/db_operations.php?server=1&amp;db=u327793104_hd&amp;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Opciones de la base de datos" alt="Opciones de la base de datos" class="icon ic_s_db"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/db_structure.php?server=1&amp;db=u327793104_hd" title="Estructura">u327793104_hd</a><div class="clearfloat"></div><div class="list_container"><ul><li class=""><div class="block"><i></i><b></b><a class="expander container" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.cHJvY2VkdXJlcw==</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.UHJvY2VkaW1pZW50b3M=</span><span class="hide pos">0</span><span class="hide pos2_name">procedures</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><i><div class="block "><a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Procedimientos" alt="Procedimientos" class="icon ic_b_routines"></a></div>&nbsp;<a class="hover_show_full" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE">Procedimientos</a></i><div class="clearfloat"></div><div style="display: none;" class="list_container"><ul><li class="new_procedure italics last new_procedure italics"><div class="block"><i></i><span class="hide pos2_name">procedures</span><span class="hide pos2_value">0</span></div><div class="block "><a class=" ajax" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;add_item=1"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Nuevo" alt="Nuevo" class="icon ic_b_routine_add"></a></div><a class="hover_show_full ajax" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;add_item=1" title="">Nuevo</a><div class="clearfloat"></div></li></ul></div></li><li class="tableContainer subContainer last tableContainer subContainer selected"><div class="block"><i></i><a class="expander loaded container" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_b_minus"></a></div><i><div class="block "><a href="https://auth-db135.hostinger.com/db_structure.php?server=1&amp;db=u327793104_hd&amp;tbl_type=table"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Tablas" alt="Tablas" class="icon ic_b_browse"></a></div>&nbsp;<a class="hover_show_full" href="https://auth-db135.hostinger.com/db_structure.php?server=1&amp;db=u327793104_hd&amp;tbl_type=table">Tablas</a></i><div class="clearfloat"></div><div class="list_container"><ul><li class="new_table italics new_table italics"><div class="block"><i></i><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_create.php?server=1&amp;db=u327793104_hd"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Nueva" alt="Nueva" class="icon ic_b_table_add"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/tbl_create.php?server=1&amp;db=u327793104_hd" title="">Nueva</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.Q0FSQUNURVJJU1RJQ0E=</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.Q0FSQUNURVJJU1RJQ0E=</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=CARACTERISTICA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=CARACTERISTICA&amp;pos=0" title="Examinar">CARACTERISTICA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.RVNQRUNJRQ==</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.RVNQRUNJRQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=ESPECIE"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=ESPECIE&amp;pos=0" title="Examinar">ESPECIE</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.RkFNSUxJQQ==</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.RkFNSUxJQQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=FAMILIA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=FAMILIA&amp;pos=0" title="Examinar">FAMILIA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.RkxPUkNPTE9S</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.RkxPUkNPTE9S</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=FLORCOLOR"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=FLORCOLOR&amp;pos=0" title="Examinar">FLORCOLOR</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.RkxPUlNJTUVUUklB</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.RkxPUlNJTUVUUklB</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=FLORSIMETRIA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=FLORSIMETRIA&amp;pos=0" title="Examinar">FLORSIMETRIA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.Rk9STUFIT0pB</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.Rk9STUFIT0pB</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=FORMAHOJA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=FORMAHOJA&amp;pos=0" title="Examinar">FORMAHOJA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.R0VORVJP</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.R0VORVJP</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=GENERO"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=GENERO&amp;pos=0" title="Examinar">GENERO</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.R0lSQQ==</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.R0lSQQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=GIRA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=GIRA&amp;pos=0" title="Examinar">GIRA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.SU1BR0VOQklUQUNPUkE=</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.SU1BR0VOQklUQUNPUkE=</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=IMAGENBITACORA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=IMAGENBITACORA&amp;pos=0" title="Examinar">IMAGENBITACORA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.SU1BR0VORVNFSkVNTE9T</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.SU1BR0VORVNFSkVNTE9T</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=IMAGENESEJEMLOS"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=IMAGENESEJEMLOS&amp;pos=0" title="Examinar">IMAGENESEJEMLOS</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.SU1BR0VORVNUSVBPUw==</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.SU1BR0VORVNUSVBPUw==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=IMAGENESTIPOS"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=IMAGENESTIPOS&amp;pos=0" title="Examinar">IMAGENESTIPOS</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.SVRFTUdMT1NBUklP</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.SVRFTUdMT1NBUklP</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=ITEMGLOSARIO"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=ITEMGLOSARIO&amp;pos=0" title="Examinar">ITEMGLOSARIO</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.TVVFU1RSQQ==</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.TVVFU1RSQQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=MUESTRA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=MUESTRA&amp;pos=0" title="Examinar">MUESTRA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.TVVFU1RSQUJJVEFDT1JB</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.TVVFU1RSQUJJVEFDT1JB</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=MUESTRABITACORA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=MUESTRABITACORA&amp;pos=0" title="Examinar">MUESTRABITACORA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.TVVFU1RSQVZFUkRF</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.TVVFU1RSQVZFUkRF</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=MUESTRAVERDE"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=MUESTRAVERDE&amp;pos=0" title="Examinar">MUESTRAVERDE</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.UEVSU09OQQ==</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.UEVSU09OQQ==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=PERSONA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=PERSONA&amp;pos=0" title="Examinar">PERSONA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.UE9TSUNJT05IT0pB</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.UE9TSUNJT05IT0pB</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=POSICIONHOJA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=POSICIONHOJA&amp;pos=0" title="Examinar">POSICIONHOJA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.UFJPQ0VERU5DSUE=</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.UFJPQ0VERU5DSUE=</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=PROCEDENCIA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=PROCEDENCIA&amp;pos=0" title="Examinar">PROCEDENCIA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.UkVDT0xFQ1RB</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.UkVDT0xFQ1RB</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=RECOLECTA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=RECOLECTA&amp;pos=0" title="Examinar">RECOLECTA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.U0FWSUFDT0xPUg==</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.U0FWSUFDT0xPUg==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=SAVIACOLOR"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=SAVIACOLOR&amp;pos=0" title="Examinar">SAVIACOLOR</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.U0FWSUFURVhUVVJB</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.U0FWSUFURVhUVVJB</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=SAVIATEXTURA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=SAVIATEXTURA&amp;pos=0" title="Examinar">SAVIATEXTURA</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.VUJJQ0FDSU9O</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.VUJJQ0FDSU9O</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=UBICACION"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=UBICACION&amp;pos=0" title="Examinar">UBICACION</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.VUJJQ0FDSU9OR1BT</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.VUJJQ0FDSU9OR1BT</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=UBICACIONGPS"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=UBICACIONGPS&amp;pos=0" title="Examinar">UBICACIONGPS</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.VUJJQ0FDSU9OR1BTQklUQUNPUkE=</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.VUJJQ0FDSU9OR1BTQklUQUNPUkE=</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=UBICACIONGPSBITACORA"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=UBICACIONGPSBITACORA&amp;pos=0" title="Examinar">UBICACIONGPSBITACORA</a><div class="clearfloat"></div></li><li class="table last table"><div class="block"><i></i><a class="expander" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><span class="hide aPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.dGFibGVz.VVNVQVJJTw==</span><span class="hide vPath">cm9vdA==.dTMyNzc5MzEwNF9oZA==.VGFibGFz.VVNVQVJJTw==</span><span class="hide pos">0</span><span class="hide pos2_name">tables</span><span class="hide pos2_value">0</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block "><a href="https://auth-db135.hostinger.com/tbl_structure.php?server=1&amp;db=u327793104_hd&amp;table=USUARIO"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="https://auth-db135.hostinger.com/sql.php?server=1&amp;db=u327793104_hd&amp;table=USUARIO&amp;pos=0" title="Examinar">USUARIO</a><div class="clearfloat"></div></li></ul></div></li></ul></div></li></ul></div></div><div id="pma_navi_settings_container"><div id="pma_navigation_settings"><div class="page_settings"><form method="post" action="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;server=1&amp;target=" class="config-form disableAjax"><input type="hidden" name="tab_hash" value=""><input type="hidden" name="check_page_refresh" id="check_page_refresh" value="1">
+<input type="hidden" name="token" value="6f7e49fa3b8fc74cb35c33ac486f1b4a">
+<input type="hidden" name="submit_save" value="Navi_panel"><input type="hidden" name="token" value="6f7e49fa3b8fc74cb35c33ac486f1b4a"><ul class="tabs">
+
+                                    <li class="active">
+
+            <a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#Navi_panel">
+            Panel de navegación            </a>
+        </li>
+                                <li>
+
+            <a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#Navi_tree">
+            Árbol de navegación            </a>
+        </li>
+                                <li>
+
+            <a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#Navi_databases">
+            Bases de datos            </a>
+        </li>
+                                <li>
+
+            <a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#Navi_tables">
+            Tablas            </a>
+        </li>
+            </ul><br><div class="tabs_contents"><fieldset class="optbox" id="Navi_panel" style=""><legend>Panel de navegación</legend><p>Cambiar la apariencia del panel de navegación.</p><table width="100%" cellspacing="0"><tbody><tr><th><label for="ShowDatabasesNavigationAsTree">Mostrar las bases de datos navegación como árbol</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_ShowDatabasesNavigationAsTree" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>En el panel de navegación, reemplaza el árbol de base de datos con un selector</small></th><td><span class="checkbox"><input type="checkbox" name="ShowDatabasesNavigationAsTree" id="ShowDatabasesNavigationAsTree" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#ShowDatabasesNavigationAsTree" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationLinkWithMainPanel">Enlace al panel principal</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationLinkWithMainPanel" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Enlace con el panel principal resaltando la base de datos o tabla actual.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationLinkWithMainPanel" id="NavigationLinkWithMainPanel" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationLinkWithMainPanel" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationDisplayLogo">Mostrar el logo</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationDisplayLogo" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Mostrar el logo en el panel de navegación.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationDisplayLogo" id="NavigationDisplayLogo" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationDisplayLogo" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationLogoLink">URL para enlace del logo</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationLogoLink" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>URL a la que apuntará el logo en el panel de navegación.</small></th><td><input type="text" size="40" name="NavigationLogoLink" id="NavigationLogoLink" value="index.php"><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationLogoLink" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationLogoLinkWindow">Logo destino del enlace</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationLogoLinkWindow" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Abrir la página enlazada en la ventana principal (<kbd>principal</kbd>) o en una nueva (<kbd>nueva</kbd>).</small></th><td><select name="NavigationLogoLinkWindow" id="NavigationLogoLinkWindow"><option value="main" selected="selected">main</option><option value="new">new</option></select><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationLogoLinkWindow" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreePointerEnable">Permitir destacar</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreePointerEnable" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Resaltar servidor bajo el cursor.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreePointerEnable" id="NavigationTreePointerEnable" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreePointerEnable" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="FirstLevelNavigationItems">Cantidad máxima de elementos en el primer nivel</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_FirstLevelNavigationItems" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>El número de elementos que pueden ser mostrados en cada página en el primer nivel del árbol de navegación.</small></th><td><input type="number" name="FirstLevelNavigationItems" id="FirstLevelNavigationItems" value="100"><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#FirstLevelNavigationItems" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeDisplayItemFilterMinimum">Número mínimo de elementos para mostrar la caja de filtro</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeDisplayItemFilterMinimum" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Define el número mínimo de elementos (tablas, vistas, rutinas y eventos) para mostrar un cuadro de filtro.</small></th><td><input type="number" name="NavigationTreeDisplayItemFilterMinimum" id="NavigationTreeDisplayItemFilterMinimum" value="30"><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeDisplayItemFilterMinimum" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NumRecentTables">Tablas recientemente utilizadas</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NumRecentTables" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Número máximo de tablas recientemente utilizadas; 0 para desactivar.</small></th><td><input type="number" name="NumRecentTables" id="NumRecentTables" value="10"><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NumRecentTables" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NumFavoriteTables">Tablas favoritas</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NumFavoriteTables" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Cantidad máxima de tablas favoritas; 0 para desactivar.</small></th><td><input type="number" name="NumFavoriteTables" id="NumFavoriteTables" value="10"><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NumFavoriteTables" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table></fieldset><fieldset class="optbox" id="Navi_tree" style="display: none;"><legend>Árbol de navegación</legend><p>Personalizar el árbol de navegación.</p><table width="100%" cellspacing="0"><tbody><tr><th><label for="MaxNavigationItems">Cantidad máxima de elementos en una rama</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_MaxNavigationItems" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>El número de elementos que pueden ser mostrados en cada página del árbol de navegación.</small></th><td><input type="number" name="MaxNavigationItems" id="MaxNavigationItems" value="50"><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#MaxNavigationItems" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeEnableGrouping">Agrupar elementos en el árbol</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeEnableGrouping" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Agrupar elementos en el árbol de navegación (determinado por el separador definido abajo en las pestañas superiores de Bases de datos y Tablas).</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeEnableGrouping" id="NavigationTreeEnableGrouping" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeEnableGrouping" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeEnableExpansion">Activar la expansión del árbol de navegación</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeEnableExpansion" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si tendrá la posibilidad de expandir el árbol en el panel de navegación.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeEnableExpansion" id="NavigationTreeEnableExpansion" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeEnableExpansion" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowTables">Mostrar tablas en árbol</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeShowTables" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se muestran las tablas bajo base de datos en el árbol de navegación</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowTables" id="NavigationTreeShowTables" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeShowTables" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowViews">Mostrar vistas en árbol</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeShowViews" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se muestran vistas bajo base de datos en el árbol de navegación</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowViews" id="NavigationTreeShowViews" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeShowViews" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowFunctions">Mostrar funciones en árbol</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeShowFunctions" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se muestran las funciones bajo la base de datos en el árbol de navegación</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowFunctions" id="NavigationTreeShowFunctions" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeShowFunctions" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowProcedures">Mostrar procedimientos en árbol</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeShowProcedures" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se muestran los procedimientos bajo la base de datos en el árbol de navegación</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowProcedures" id="NavigationTreeShowProcedures" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeShowProcedures" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowEvents">Mostrar eventos en árbol</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeShowEvents" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se muestran eventos bajo la base de datos en el árbol de navegación</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowEvents" id="NavigationTreeShowEvents" checked="checked"></span><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeShowEvents" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table></fieldset><fieldset class="optbox" id="Navi_databases" style="display: none;"><legend>Bases de datos</legend><p>Opciones para visualizar las bases de datos.</p><table width="100%" cellspacing="0"><tbody><tr><th><label for="NavigationTreeDisplayDbFilterMinimum">Número mínimo de bases de datos a mostrar en la ventana de filtro de bases de datos</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeDisplayDbFilterMinimum" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span></th><td><input type="number" name="NavigationTreeDisplayDbFilterMinimum" id="NavigationTreeDisplayDbFilterMinimum" value="30"><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeDisplayDbFilterMinimum" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeDbSeparator">Separador de árbol de base de datos</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeDbSeparator" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Cadena que separa bases de datos en diferentes niveles de árbol.</small></th><td><input type="text" size="25" name="NavigationTreeDbSeparator" id="NavigationTreeDbSeparator" value="_"><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeDbSeparator" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table></fieldset><fieldset class="optbox" id="Navi_tables" style="display: none;"><legend>Tablas</legend><p>Opciones para visualizar las tablas.</p><table width="100%" cellspacing="0"><tbody><tr><th><label for="NavigationTreeDefaultTabTable">Destino para el icono de acceso rápido</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeDefaultTabTable" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span></th><td><select name="NavigationTreeDefaultTabTable" id="NavigationTreeDefaultTabTable"><option value="structure" selected="selected">Estructura</option><option value="sql">SQL</option><option value="search">Buscar</option><option value="insert">Insertar</option><option value="browse">Examinar</option></select><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeDefaultTabTable" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeDefaultTabTable2">Objetivo para el segundo icono de acceso rápido</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeDefaultTabTable2" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span></th><td><select name="NavigationTreeDefaultTabTable2" id="NavigationTreeDefaultTabTable2"><option value="" selected="selected"></option><option value="structure">Estructura</option><option value="sql">SQL</option><option value="search">Buscar</option><option value="insert">Insertar</option><option value="browse">Examinar</option></select><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeDefaultTabTable2" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeTableSeparator">Separador de árbol de tablas</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeTableSeparator" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Cadena que separa tablas en diferentes niveles de árbol.</small></th><td><input type="text" size="25" name="NavigationTreeTableSeparator" id="NavigationTreeTableSeparator" value="__"><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeTableSeparator" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeTableLevel">Profundidad máxima del árbol de tablas</label><span class="doc"><a href="https://auth-db135.hostinger.com/doc/html/config.html#cfg_NavigationTreeTableLevel" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span></th><td><input type="number" name="NavigationTreeTableLevel" id="NavigationTreeTableLevel" value="1"><a class="restore-default" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#NavigationTreeTableLevel" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table></fieldset></div>
+</form>
+<script type="text/javascript">
+if (typeof configInlineParams === "undefined" || !Array.isArray(configInlineParams)) configInlineParams = [];
+configInlineParams.push(function() {
+validateField('FirstLevelNavigationItems', 'PMA_validatePositiveNumber', true);
+validateField('NumRecentTables', 'PMA_validateNonNegativeNumber', true);
+validateField('NumFavoriteTables', 'PMA_validateNonNegativeNumber', true);
+validateField('MaxNavigationItems', 'PMA_validatePositiveNumber', true);
+validateField('NavigationTreeTableLevel', 'PMA_validatePositiveNumber', true);
+$.extend(PMA_messages, {
+	'error_nan_p': '¡No es un número positivo!',
+	'error_nan_nneg': '¡No es un número no-negativo!',
+	'error_incorrect_port': '¡No es un número de puerto válido!',
+	'error_invalid_value': '¡Valor incorrecto!',
+	'error_value_lte': '¡El valor debe ser igual o menor que %s!'});
+$.extend(defaultValues, {
+	'ShowDatabasesNavigationAsTree': true,
+	'NavigationLinkWithMainPanel': true,
+	'NavigationDisplayLogo': true,
+	'NavigationLogoLink': 'index.php',
+	'NavigationLogoLinkWindow': ['main'],
+	'NavigationTreePointerEnable': true,
+	'FirstLevelNavigationItems': '100',
+	'NavigationTreeDisplayItemFilterMinimum': '30',
+	'NumRecentTables': '10',
+	'NumFavoriteTables': '10',
+	'MaxNavigationItems': '50',
+	'NavigationTreeEnableGrouping': true,
+	'NavigationTreeEnableExpansion': true,
+	'NavigationTreeShowTables': true,
+	'NavigationTreeShowViews': true,
+	'NavigationTreeShowFunctions': true,
+	'NavigationTreeShowProcedures': true,
+	'NavigationTreeShowEvents': true,
+	'NavigationTreeDisplayDbFilterMinimum': '30',
+	'NavigationTreeDbSeparator': '_',
+	'NavigationTreeDefaultTabTable': ['structure'],
+	'NavigationTreeDefaultTabTable2': [''],
+	'NavigationTreeTableSeparator': '__',
+	'NavigationTreeTableLevel': '1'});
+});
+if (typeof configScriptLoaded !== "undefined" && configInlineParams) loadInlineConfig();
+</script></div></div></div></div><div class="pma_drop_handler">Suelte aquí los archivos</div><div class="pma_sql_import_status"><h2>SQL upload ( <span class="pma_import_count">0</span> ) <span class="close">x</span><span class="minimize">-</span></h2><div></div></div></div><div id="prefs_autoload" class="notice print_ignore" style="display:none">
+    <form action="https://auth-db135.hostinger.com/prefs_manage.php" method="post" class="disableAjax">
+        <input type="hidden" name="token" value="6f7e49fa3b8fc74cb35c33ac486f1b4a">        <input type="hidden" name="json" value="">
+        <input type="hidden" name="submit_import" value="1">
+        <input type="hidden" name="return_url" value="index.php?">
+        El navegador tiene una configuración phpMyAdmin para este dominio. ¿Quieres importarlo a la sesión actual?        <br>
+        <a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#yes">Sí</a>
+        / <a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#no">No</a>
+        / <a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#delete">Borrar configuración </a>
+    </form>
+</div>
+<div id="floating_menubar" style="margin-left: 243px; left: 0px; position: fixed; top: 0px; width: 100%; z-index: 99;"><div id="serverinfo"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_host item"><a href="https://auth-db135.hostinger.com/index.php" class="item">Servidor: localhost:3306</a><span class="separator item">&nbsp;»</span><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_db item"><a href="https://auth-db135.hostinger.com/db_structure.php?db=u327793104_hd" class="item">Base de datos: u327793104_hd</a><div class="clearfloat"></div></div><div id="topmenucontainer" class="menucontainer"><ul id="topmenu" class="resizable-menu"><li>
+
+            <a href="https://auth-db135.hostinger.com/db_structure.php?db=u327793104_hd" class="tab">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props">&nbsp;Estructura            </a>
+        </li>
+<li>
+
+            <a href="https://auth-db135.hostinger.com/db_sql.php?db=u327793104_hd" class="tab">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="SQL" alt="SQL" class="icon ic_b_sql">&nbsp;SQL            </a>
+        </li>
+<li>
+
+            <a href="https://auth-db135.hostinger.com/db_search.php?db=u327793104_hd" class="tab">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Buscar" alt="Buscar" class="icon ic_b_search">&nbsp;Buscar            </a>
+        </li>
+<li>
+
+            <a href="https://auth-db135.hostinger.com/db_qbe.php?db=u327793104_hd" class="tab">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Generar una consulta" alt="Generar una consulta" class="icon ic_s_db">&nbsp;Generar una consulta            </a>
+        </li>
+<li>
+
+            <a href="https://auth-db135.hostinger.com/db_export.php?db=u327793104_hd" class="tab">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar            </a>
+        </li>
+<li>
+
+            <a href="https://auth-db135.hostinger.com/db_import.php?db=u327793104_hd" class="tab">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Importar" alt="Importar" class="icon ic_b_import">&nbsp;Importar            </a>
+        </li>
+<li>
+
+            <a href="https://auth-db135.hostinger.com/db_operations.php?db=u327793104_hd" class="tab">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Operaciones" alt="Operaciones" class="icon ic_b_tblops">&nbsp;Operaciones            </a>
+        </li>
+<li class="active">
+
+            <a href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd" class="tabactive">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Rutinas" alt="Rutinas" class="icon ic_b_routines">&nbsp;Rutinas            </a>
+        </li>
+
+
+
+<li class="submenu shown" style=""><a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#" class="tab nowrap"><img alt="" title="" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" class="icon ic_b_more">Más</a><ul class="notonly"><li>
+
+            <a href="https://auth-db135.hostinger.com/db_events.php?db=u327793104_hd" class="tab">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eventos" alt="Eventos" class="icon ic_b_events">&nbsp;Eventos            </a>
+        </li><li>
+
+            <a href="https://auth-db135.hostinger.com/db_triggers.php?db=u327793104_hd" class="tab">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Disparadores" alt="Disparadores" class="icon ic_b_triggers">&nbsp;Disparadores            </a>
+        </li><li>
+
+            <a href="https://auth-db135.hostinger.com/db_designer.php?db=u327793104_hd" id="designer_tab" class="tab">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Diseñador" alt="Diseñador" class="icon ic_b_relations">&nbsp;Diseñador            </a>
+        </li></ul></li><div class="clearfloat"></div></ul>
+</div>
+</div>
+<span id="page_nav_icons"><span id="lock_page_icon"></span><span id="page_settings_icon" style="display: none;"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ajustes de página relacionada" alt="Ajustes de página relacionada" class="icon ic_s_cog"></span><a id="goto_pagetop" href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Pulse en la barra para deslizarse al tope de la página" alt="Pulse en la barra para deslizarse al tope de la página" class="icon ic_s_top"></a></span><div id="pma_console_container">
+    <div id="pma_console">
+        <!-- Console toolbar -->
+        <div class="toolbar collapsed">
+            <div class="switch_button console_switch">
+            <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Consola de consultas SQL" alt="Consola de consultas SQL" class="icon ic_console">            <span> Consola </span>
+        </div>
+            <div class="button clear">
+                        <span> Limpiar </span>
+        </div>
+            <div class="button history">
+                        <span> Historial </span>
+        </div>
+            <div class="button options">
+                        <span> Opciones </span>
+        </div>
+            <div class="button bookmarks">
+                        <span> Favoritos </span>
+        </div>
+            <div class="button debug hide">
+                        <span> Depuración SQL </span>
+        </div>
+    </div>
+        <!-- Toolbar end -->
+        <!-- Console messages -->
+        <div class="content" style="height: 92px; margin-bottom: -98.2344px; display: none;">
+            <div class="console_message_container">
+                <div class="message welcome binded">
+                    <span id="instructions-0">
+                        Presione Ctrl+Enter para ejecutar la consulta                    </span>
+                    <span class="hide" id="instructions-1">
+                        Presione Enter para ejecutar la consulta                    </span>
+                </div>
+                            <div class="message collapsed binded select successed" msgid="466179577946" targetdb="u327793104_hd" targettable="USUARIO"><div class="action_content">
+            <span class="action collapse">
+            Colapsar                    </span>
+            <span class="action expand">
+            Expandir                    </span>
+            <span class="action requery">
+            Reconsultar                    </span>
+            <span class="action edit">
+            Editar                    </span>
+            <span class="action explain">
+            Explicar                    </span>
+            <span class="action profiling">
+            Perfilando                    </span>
+            <span class="action bookmark">
+            Agregar a favoritos                    </span>
+            <span class="text failed">
+            Falló la consulta                    </span>
+            <span class="text targetdb">
+            Base de datos                            : <span>u327793104_hd</span>
+                    </span>
+            <span class="text query_time" title="Fri Dec 22 2017 09:58:26 GMT-0600 (CST)">
+            Fecha y hora la consulta                            : <span>9:58:26</span>
+                    </span>
+    </div><div class="query highlighted"><span class="cm-keyword">select</span> * <span class="cm-keyword">from</span> USUARIO</div></div></div> <!-- console_message_container -->
+            <div class="query_input">
+                <span class="console_query_input"><div class="CodeMirror cm-s-pma CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 16px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: 0px; border-right-width: 30px; min-height: 17px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 0px; top: 0px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code"><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 17px;"></div><div class="CodeMirror-gutters" style="height: 47px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div></div></div></div></span>
+            </div>
+        </div> <!-- message end -->
+        <!-- Drak the console with other cards over it -->
+        <div class="mid_layer"></div>
+        <!-- Debug SQL card -->
+        <div class="card ungrouped" id="debug_console">
+            <div class="toolbar ">
+            <div class="button order order_asc active">
+                        <span> ascendente </span>
+        </div>
+            <div class="button order order_desc">
+                        <span> descendente </span>
+        </div>
+            <div class="text">
+                        <span> Orden: </span>
+        </div>
+            <div class="switch_button">
+                        <span> Depuración SQL </span>
+        </div>
+            <div class="button order_by sort_count">
+                        <span> Cantidad </span>
+        </div>
+            <div class="button order_by sort_exec active">
+                        <span> Orden de ejecución </span>
+        </div>
+            <div class="button order_by sort_time">
+                        <span> Tiempo necesario </span>
+        </div>
+            <div class="text">
+                        <span> Ordenar por: </span>
+        </div>
+            <div class="button group_queries">
+                        <span> Consultas grupales </span>
+        </div>
+            <div class="button ungroup_queries">
+                        <span> Desagrupar las consultas </span>
+        </div>
+    </div>
+            <div class="content debug" style="height: 92px;">
+                <div class="message welcome binded">Ocurrió un error al obtener información de depuración SQL.</div>
+                <div class="debugLog"></div>
+            </div> <!-- Content -->
+            <div class="templates">
+                <div class="debug_query action_content">
+            <span class="action collapse">
+            Colapsar                    </span>
+            <span class="action expand">
+            Expandir                    </span>
+            <span class="action dbg_show_trace">
+            Mostrar rastro                    </span>
+            <span class="action dbg_hide_trace">
+            Ocultar rastro                    </span>
+            <span class="text count hide">
+            Cantidad                            : <span>  </span>
+                    </span>
+            <span class="text time">
+            Tiempo necesario                            : <span>  </span>
+                    </span>
+    </div>
+            </div> <!-- Template -->
+        </div> <!-- Debug SQL card -->
+                <!-- Options card: -->
+        <div class="card" id="pma_console_options">
+            <div class="toolbar ">
+            <div class="switch_button">
+                        <span> Opciones </span>
+        </div>
+            <div class="button default">
+                        <span> Definir predeterminado </span>
+        </div>
+    </div>
+            <div class="content" style="height: 92px;">
+                <label>
+                    <input type="checkbox" name="always_expand">Siempre expandir mensajes de consultas                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="start_history">Mostrar histórico de consultas al iniciar                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="current_query">Mostrar consulta de navegación actual                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="enter_executes">
+                        Ejecute consultas con Enter e introduce la nueva línea con Shift + Enter. Para que esto permanezca, vea la configuración.                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="dark_theme">Cambiar al tema oscuro                </label>
+                <br>
+            </div>
+        </div> <!-- Options card -->
+        <div class="templates">
+            <!-- Templates for console message actions -->
+            <div class="query_actions">
+            <span class="action collapse">
+            Colapsar                    </span>
+            <span class="action expand">
+            Expandir                    </span>
+            <span class="action requery">
+            Reconsultar                    </span>
+            <span class="action edit">
+            Editar                    </span>
+            <span class="action explain">
+            Explicar                    </span>
+            <span class="action profiling">
+            Perfilando                    </span>
+            <span class="action bookmark">
+            Agregar a favoritos                    </span>
+            <span class="text failed">
+            Falló la consulta                    </span>
+            <span class="text targetdb">
+            Base de datos                            : <span>  </span>
+                    </span>
+            <span class="text query_time">
+            Fecha y hora la consulta                            : <span>  </span>
+                    </span>
+    </div>
+        </div>
+    </div> <!-- #console end -->
+</div> <!-- #console_container end -->
+<div id="page_content"><span id="PMA_slidingMessage" style="display: inline-block; width: 100%; height: 120.188px;"><div style=""><div class="result_query" style="text-align: left">
+<div class="success"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_s_success"> Se modificó la rutina `sp_Valida_Correo`.</div><div class="sqlOuter"><code class="sql"><pre style="display: none;">DROP PROCEDURE `sp_Valida_Correo`;
+CREATE DEFINER=`u327793104_hd`@`localhost` PROCEDURE `sp_Valida_Correo`(IN `correo_p` VARCHAR(200)) NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER BEGIN
+DECLARE countCorreo INT;
+SELECT count(email) INTO countCorreo
+FROM USUARIO
+WHERE email = p_email;
+END
+</pre><div class="sql-highlight cm-s-default"><span class="cm-keyword"><a target="mysql_doc" class="cm-sql-doc" href="https://auth-db135.hostinger.com/url.php?url=https://dev.mysql.com/doc/refman/5.5/en/drop-procedure.html">DROP</a></span> <span class="cm-keyword"><a target="mysql_doc" class="cm-sql-doc" href="https://auth-db135.hostinger.com/url.php?url=https://dev.mysql.com/doc/refman/5.5/en/drop-procedure.html">PROCEDURE</a></span> <span class="cm-variable-2">`sp_Valida_Correo`</span>;
+<span class="cm-keyword">CREATE</span> DEFINER=<span class="cm-variable-2">`u327793104_hd`</span><span class="cm-variable-2">@`localhost` PROCEDURE `sp_Valida_Correo`(IN `correo_p`</span> <span class="cm-builtin"><a target="mysql_doc" class="cm-sql-doc" href="https://auth-db135.hostinger.com/url.php?url=https://dev.mysql.com/doc/refman/5.5/en/string-types.html">VARCHAR</a></span>(<span class="cm-number">200</span>)) <span class="cm-keyword"><a target="mysql_doc" class="cm-sql-doc" href="https://auth-db135.hostinger.com/url.php?url=https://dev.mysql.com/doc/refman/5.5/en/logical-operators.html#operator_not">NOT</a></span> <span class="cm-keyword">DETERMINISTIC</span> <span class="cm-keyword">CONTAINS</span> <span class="cm-keyword">SQL</span> <span class="cm-keyword">SQL</span> <span class="cm-keyword">SECURITY</span> DEFINER <span class="cm-keyword">BEGIN</span>
+<span class="cm-keyword"><a target="mysql_doc" class="cm-sql-doc" href="https://auth-db135.hostinger.com/url.php?url=https://dev.mysql.com/doc/refman/5.5/en/declare.html#declare">DECLARE</a></span> countCorreo <span class="cm-builtin"><a target="mysql_doc" class="cm-sql-doc" href="https://auth-db135.hostinger.com/url.php?url=https://dev.mysql.com/doc/refman/5.5/en/numeric-types.html">INT</a></span>;
+<span class="cm-keyword"><a target="mysql_doc" class="cm-sql-doc" href="https://auth-db135.hostinger.com/url.php?url=https://dev.mysql.com/doc/refman/5.5/en/select.html">SELECT</a></span> <span class="cm-keyword"><a target="mysql_doc" class="cm-sql-doc" href="https://auth-db135.hostinger.com/url.php?url=https://dev.mysql.com/doc/refman/5.5/en/group-by-functions.html#function_count">count</a></span>(email) <span class="cm-keyword">INTO</span> countCorreo
+<span class="cm-keyword">FROM</span> USUARIO
+<span class="cm-keyword">WHERE</span> email = p_email;
+<span class="cm-keyword">END</span>
+</div></code></div><div class="tools print_ignore"><form action="https://auth-db135.hostinger.com/sql.php" method="post"><input type="hidden" name="db" value="u327793104_hd"><input type="hidden" name="token" value="6f7e49fa3b8fc74cb35c33ac486f1b4a"><input type="hidden" name="sql_query" value="DROP PROCEDURE `sp_Valida_Correo`;
+CREATE DEFINER=`u327793104_hd`@`localhost` PROCEDURE `sp_Valida_Correo`(IN `correo_p` VARCHAR(200)) NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER BEGIN
+DECLARE countCorreo INT;
+SELECT count(email) INTO countCorreo
+FROM USUARIO
+WHERE email = p_email;
+END"></form> [
+<a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#" class="inline_edit_sql">Editar en línea</a>
+] [
+<a href="https://auth-db135.hostinger.com/db_sql.php?db=u327793104_hd&amp;sql_query=DROP+PROCEDURE+%60sp_Valida_Correo%60%3B%0ACREATE+DEFINER%3D%60u327793104_hd%60%40%60localhost%60+PROCEDURE+%60sp_Valida_Correo%60%28IN+%60correo_p%60+VARCHAR%28200%29%29+NOT+DETERMINISTIC+CONTAINS+SQL+SQL+SECURITY+DEFINER+BEGIN%0D%0ADECLARE+countCorreo+INT%3B%0D%0ASELECT+count%28email%29+INTO+countCorreo%0D%0AFROM+USUARIO%0D%0AWHERE+email+%3D+p_email%3B%0D%0AEND&amp;show_query=1#querybox">Editar</a>
+] [
+<a href="https://auth-db135.hostinger.com/import.php?db=u327793104_hd&amp;sql_query=DROP+PROCEDURE+%60sp_Valida_Correo%60%3B%0ACREATE+DEFINER%3D%60u327793104_hd%60%40%60localhost%60+PROCEDURE+%60sp_Valida_Correo%60%28IN+%60correo_p%60+VARCHAR%28200%29%29+NOT+DETERMINISTIC+CONTAINS+SQL+SQL+SECURITY+DEFINER+BEGIN%0D%0ADECLARE+countCorreo+INT%3B%0D%0ASELECT+count%28email%29+INTO+countCorreo%0D%0AFROM+USUARIO%0D%0AWHERE+email+%3D+p_email%3B%0D%0AEND&amp;show_query=1&amp;show_as_php=1">Crear código PHP</a>
+]</div></div></div></span><div id="loading_parent"></div><!-- LIST OF STORED_ROUTINES START -->
+<form id="rteListForm" class="ajax" action="https://auth-db135.hostinger.com/db_routines.php"><input type="hidden" name="db" value="u327793104_hd"><input type="hidden" name="token" value="6f7e49fa3b8fc74cb35c33ac486f1b4a"><fieldset>
+    <legend>
+        Rutinas
+        <a href="https://auth-db135.hostinger.com/url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Fstored-routines.html" target="mysql_doc"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+    </legend>
+    <div class="hide" id="nothing2display">
+      No hay rutinas para mostrar.
+    </div>
+    <table class="data">
+        <!-- TABLE HEADERS -->
+        <tbody><tr>
+            <th></th>
+            <th>Nombre</th>
+            <th colspan="4">Acción</th>
+            <th>Tipo</th>
+            <th>Retorna</th>
+        </tr>
+        <tr style="display: none" class="odd">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- TABLE DATA -->
+        <tr class="even">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="GetEspeciesPorCientifico">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `GetEspeciesPorCientifico`</span>
+                <strong>
+                    GetEspeciesPorCientifico
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=GetEspeciesPorCientifico&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_routine=1&amp;item_name=GetEspeciesPorCientifico&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=GetEspeciesPorCientifico&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60GetEspeciesPorCientifico%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+        <tr class="odd">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="ValidarUsuario">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `ValidarUsuario`</span>
+                <strong>
+                    ValidarUsuario
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=ValidarUsuario&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_dialog=1&amp;item_name=ValidarUsuario&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=ValidarUsuario&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60ValidarUsuario%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="getCaracteristicasEspecie">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `getCaracteristicasEspecie`</span>
+                <strong>
+                    getCaracteristicasEspecie
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=getCaracteristicasEspecie&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_dialog=1&amp;item_name=getCaracteristicasEspecie&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=getCaracteristicasEspecie&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60getCaracteristicasEspecie%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+        <tr class="odd">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="getDetalleMuestra">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `getDetalleMuestra`</span>
+                <strong>
+                    getDetalleMuestra
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=getDetalleMuestra&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_dialog=1&amp;item_name=getDetalleMuestra&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=getDetalleMuestra&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60getDetalleMuestra%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="getEspeciesPorComun">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `getEspeciesPorComun`</span>
+                <strong>
+                    getEspeciesPorComun
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=getEspeciesPorComun&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_routine=1&amp;item_name=getEspeciesPorComun&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=getEspeciesPorComun&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60getEspeciesPorComun%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+        <tr class="odd">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="getListaCaracteristicas">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `getListaCaracteristicas`</span>
+                <strong>
+                    getListaCaracteristicas
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=getListaCaracteristicas&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_dialog=1&amp;item_name=getListaCaracteristicas&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=getListaCaracteristicas&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60getListaCaracteristicas%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="getMuestrasDeEspecie">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `getMuestrasDeEspecie`</span>
+                <strong>
+                    getMuestrasDeEspecie
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=getMuestrasDeEspecie&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_dialog=1&amp;item_name=getMuestrasDeEspecie&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=getMuestrasDeEspecie&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60getMuestrasDeEspecie%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+        <tr class="odd">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="getMuestrasVerdes">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `getMuestrasVerdes`</span>
+                <strong>
+                    getMuestrasVerdes
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=getMuestrasVerdes&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_dialog=1&amp;item_name=getMuestrasVerdes&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=getMuestrasVerdes&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60getMuestrasVerdes%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="sp_Insertar_PersonaUsuario">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `sp_Insertar_PersonaUsuario`</span>
+                <strong>
+                    sp_Insertar_PersonaUsuario
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=sp_Insertar_PersonaUsuario&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_dialog=1&amp;item_name=sp_Insertar_PersonaUsuario&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=sp_Insertar_PersonaUsuario&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60sp_Insertar_PersonaUsuario%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+        <tr class="odd">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="sp_Insertar_Usuario">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `sp_Insertar_Usuario`</span>
+                <strong>
+                    sp_Insertar_Usuario
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=sp_Insertar_Usuario&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_dialog=1&amp;item_name=sp_Insertar_Usuario&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=sp_Insertar_Usuario&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60sp_Insertar_Usuario%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+        
+    </tbody>        
+        
+        
+        <tr class="even">
+            <td>
+                <input type="checkbox" class="checkall" name="item_name[]" value="sp_Valida_Correo">            </td>
+            <td>
+                <span class="drop_sql hide">DROP PROCEDURE IF EXISTS `sp_Valida_Correo`</span>
+                <strong>
+                    sp_Valida_Correo
+                </strong>
+            </td>
+            <td>
+                <a class="ajax edit_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;edit_item=1&amp;item_name=sp_Valida_Correo&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editar" alt="Editar" class="icon ic_b_edit">&nbsp;Editar</span></a>
+            </td>
+            <td>
+                <a class="ajax exec_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;execute_dialog=1&amp;item_name=sp_Valida_Correo&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Ejecutar" alt="Ejecutar" class="icon ic_b_nextpage">&nbsp;Ejecutar</span></a>
+            </td>
+            <td>
+                <a class="ajax export_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;export_item=1&amp;item_name=sp_Valida_Correo&amp;item_type=PROCEDURE"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></a>
+            </td>
+            <td>
+                <a class="ajax drop_anchor" href="https://auth-db135.hostinger.com/sql.php?db=u327793104_hd&amp;table=&amp;sql_query=DROP+PROCEDURE+IF+EXISTS+%60sp_Valida_Correo%60&amp;goto=db_routines.php%3Fdb%3Du327793104_hd"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></a>
+            </td>
+            <td>
+                 PROCEDURE
+            </td>
+            <td dir="ltr">
+                
+            </td>
+        </tr>
+</table>
+<div class="withSelected"><img class="selectallarrow" src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/arrow_ltr.png" width="38" height="22" alt="Para los elementos que están marcados:">
+<input type="checkbox" id="rteListForm_checkall" class="checkall_box" title="Seleccionar todo">
+<label for="rteListForm_checkall"> Seleccionar todo </label>
+<i style="margin-left: 2em">
+    Para los elementos que están marcados: </i>
+<button class="mult_submit" type="submit" name="submit_mult" value="export" title="Exportar">
+<span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar</span></button>
+<button class="mult_submit" type="submit" name="submit_mult" value="drop" title="Eliminar">
+<span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span></button>
+</div></fieldset>
+</form>
+<!-- LIST OF STORED_ROUTINES END -->
+<!-- ADD ROUTINE FORM START -->
+<fieldset class="left">
+<legend>Nuevo</legend>
+        <div class="wrap">
+            <a class="ajax add_anchor" href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;add_item=1" onclick="$.datepicker.initialized = false;"><span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="" alt="" class="icon ic_b_routine_add">&nbsp;</span>Agregar rutina</a>
+            <a href="https://auth-db135.hostinger.com/url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Fcreate-procedure.html" target="mysql_doc"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+        </div>
+</fieldset>
+<!-- ADD ROUTINE FORM END -->
+
+</div><div id="selflink" class="print_ignore"><a href="https://auth-db135.hostinger.com/db_routines.php?db=u327793104_hd&amp;table=&amp;server=1&amp;target=" title="Abrir nueva ventana de phpMyAdmin" target="_blank" rel="noopener noreferrer"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Abrir nueva ventana de phpMyAdmin" alt="Abrir nueva ventana de phpMyAdmin" class="icon ic_window-new"></a></div><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="rteDialog" aria-labelledby="ui-id-27" style="position: fixed; height: auto; width: 700px; top: 0px; left: 286.391px; z-index: 101;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-27" class="ui-dialog-title">Editar rutina</span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="rteDialog" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 39.0469px; max-height: 615.047px; height: auto;"><!-- START EDIT ROUTINE FORM -->
+
+<form class="rte_form" action="https://auth-db135.hostinger.com/db_routines.php" method="post">
+<input name="edit_item" type="hidden" value="1">
+<input name="item_original_name" type="hidden" value="sp_Valida_Correo">
+<input name="item_original_type" type="hidden" value="PROCEDURE">
+<input type="hidden" name="db" value="u327793104_hd"><input type="hidden" name="token" value="6f7e49fa3b8fc74cb35c33ac486f1b4a">
+<fieldset>
+<legend>Detalles</legend>
+<table class="rte_table" style="width: 100%">
+<tbody><tr>
+    <td style="width: 20%;">Nombre de rutina</td>
+    <td><input type="text" name="item_name" maxlength="64" value="sp_Valida_Correo"></td>
+</tr>
+<tr>
+    <td>Tipo</td>
+    <td>
+        <select name="item_type">
+<option value="PROCEDURE" selected="selected">PROCEDURE</option>
+<option value="FUNCTION">FUNCTION</option>
+</select>
+    </td>
+</tr>
+<tr>
+    <td>Parámetros</td>
+    <td>
+        <table class="routine_params_table">
+        <thead>
+        <tr>
+            <td></td>
+            <th class="routine_direction_cell">Dirección</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Longitud/Valores</th>
+            <th colspan="1">Opciones</th>
+            <th class="routine_param_remove hide">&nbsp;</th>
+        </tr>        </thead>
+        <tbody class="ui-sortable">
+        <tr>
+            <td class="dragHandle ui-sortable-handle"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></td>
+            <td class="routine_direction_cell">
+                <select name="item_param_dir[0]">
+                    <option selected="selected">IN</option>
+                    <option>OUT</option>
+                    <option>INOUT</option>
+                </select>
+            </td>
+            <td><input name="item_param_name[0]" type="text" value="correo_p"></td>
+            <td><select name="item_param_type[0]"><option title="Un entero de 4 bytes; el rango con signo es de 2147483648 a 2147483647, el rango sin signo es de 0 a 4294967295">INT</option><option selected="selected" title="Una cadena de longitud variable (0-65,535), la longitud máxima está asociada al tamaño máximo de un registro">VARCHAR</option><option title="Una columna de texto con una longitud máxima de 65535 (2^16 - 1) caracteres, almacenado con un prefijo de 2 bytes que indica la longitud del valor en bytes">TEXT</option><option title="Una fecha, el rango válido es de «1000-01-01» a «9999-12-31»">DATE</option><optgroup label="Numérico"><option title="Un entero de 1 byte; el rango con signo es de -128 a 127, el rango sin signo es de 0 a 255">TINYINT</option><option title="Un entero de 2 bytes; el rango con signo es de -32768 a 32767, el rango sin signo es de 0 a 65535">SMALLINT</option><option title="Un entero de 3 bytes; el rango con signo es de -8388608 a 8388607, el rango sin signo es de 0 a 16777215">MEDIUMINT</option><option title="Un entero de 4 bytes; el rango con signo es de 2147483648 a 2147483647, el rango sin signo es de 0 a 4294967295">INT</option><option title="En entero de 8 bytes; el rango con signo es de -9223372036854775808 a 9223372036854775807, el rango sin signo es de 0 a 18446744073709551615">BIGINT</option><option disabled="disabled">-</option><option title="Un número decimal fijo (M, D) - la mayor cantidad de dígitos (M) es 65 (valor predeterminado de 10), el mayor número posible de decimales (D) es 30 (valor predeterminado de 0)">DECIMAL</option><option title="Un número de coma flotante pequeño; los valores posibles son de -3.402823466E+38 a -1.175494351E-38, 0 y de 1.175494351E-38 a 3.402823466E+38">FLOAT</option><option title="Un número de coma flotante de precisión doble; los valores permitidos son de -1.7976931348623157E+308 a -2.2250738585072014E-308, 0 y de 2.2250738585072014E-308 a 1.7976931348623157E+308">DOUBLE</option><option title="Sinónimo de DOUBLE (excepción: si el modo SQL «REAL_AS_FLOAT» está activo es sinónimo de FLOAT)">REAL</option><option disabled="disabled">-</option><option title="Una máscara de bits (M), almacenando M bits por valor (valor predeterminado de 1, máximo de 64)">BIT</option><option title="Sinónimo de TINYINT(1), un valor de cero es considerado falso, cualquier valor distinto de cero es considerado verdadero">BOOLEAN</option><option title="Un sinónimo de BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE">SERIAL</option></optgroup><optgroup label="Fecha y marca temporal"><option title="Una fecha, el rango válido es de «1000-01-01» a «9999-12-31»">DATE</option><option title="Una combinación de fecha y marca temporal, el rango válido es de «1000-01-01 00:00:00» a «9999-12-31 23:59:59»">DATETIME</option><option title="Una marca temporal; el rango es de «01-Ene-1970 00:00:01» UTC a «09-Ene-2038 03:14:07» UTC almacenados como la cantidad de segundos desde el «epoch» («01-Ene-1970 00:00:00» UTC)">TIMESTAMP</option><option title="Una marca temporal, el rango es de «-838:59:59» a «838:59:59»">TIME</option><option title="Un año en formato de cuatro dígitos (4, el valor predeterminado) o dos dígitos (2); los valores posibles son de 70 (1970) a 69 (2069) ó de 1901 a 2155 y 0000">YEAR</option></optgroup><optgroup label="Cadena"><option title="Una cadena de longitud fija (de 0 a 255, valor predeterminado de 1) que es siempre completada a la derecha con espacios hasta la longitud especificada al ser almacenada">CHAR</option><option selected="selected" title="Una cadena de longitud variable (0-65,535), la longitud máxima está asociada al tamaño máximo de un registro">VARCHAR</option><option disabled="disabled">-</option><option title="Una columna de texto con una longitud máxima de 255 (2^8 - 1) caracteres, almacenado con un prefijo de 1 byte que indica la longitud del valor en bytes">TINYTEXT</option><option title="Una columna de texto con una longitud máxima de 65535 (2^16 - 1) caracteres, almacenado con un prefijo de 2 bytes que indica la longitud del valor en bytes">TEXT</option><option title="Una columna de texto con una longitud máxima de 16777215 (2^24 - 1) caracteres, almacenado con un prefijo de 3 bytes que indica la longitud del valor en bytes">MEDIUMTEXT</option><option title="Una columna de texto con una longitud máxima de 4294967295 ó 4Gb (2^32 - 1) caracteres, almacenado con un prefijo de 4 bytes que indica la longitud del valor en bytes">LONGTEXT</option><option disabled="disabled">-</option><option title="Similar al tipo CHAR, pero almacena cadenas binarias de bytes en lugar de cadenas de caracteres no binarios">BINARY</option><option title="Similar al tipo VARCHAR, pero almacena cadenas binarias de bytes en lugar de cadenas de caracteres no binarios">VARBINARY</option><option disabled="disabled">-</option><option title="Una columna de bloque de texto («BLOB») con una longitud máxima de 255 (2^8 - 1) bytes. Cada valor TINYBLOB es almacenado con un prefijo de 1 byte que indica la cantidad de bytes en el valor">TINYBLOB</option><option title="Una columna de bloque de texto («BLOB») con una longitud máxima de 16777215 (2^24 - 1) bytes, almacenado con un prefijo de 3 bytes que indica la longitud del valor">MEDIUMBLOB</option><option title="Una columna de bloque de texto («BLOB») con una longitud máxima de 65535 (2^16 - 1) bytes, almacenado con un prefijo de 2 bytes que indica la longitud del valor">BLOB</option><option title="Una columna de bloque de texto («BLOB») con una longitud máxima de 4294967295 (2^32 - 1) bytes (4GB), almacenado con un prefijo de 4 bytes que indica la longitud del valor">LONGBLOB</option><option disabled="disabled">-</option><option title="Una enumeración, elegida de una lista de hasta 65535 valores o el valor especial de error &#39;&#39;">ENUM</option><option title="Un único valor elegido de un conjunto de hasta 64 elementos">SET</option></optgroup><optgroup label="Espacial"><option title="Un tipo que puede almacenar una geometría de cualquier tipo">GEOMETRY</option><option title="Un punto en espacio de dos dimensiones">POINT</option><option title="Una curva con interpolación lineal entre puntos">LINESTRING</option><option title="Un polígono">POLYGON</option><option title="Una colección de puntos">MULTIPOINT</option><option title="Una colección de curvas con interpolación lineal entre puntos">MULTILINESTRING</option><option title="Una colección de polígonos">MULTIPOLYGON</option><option title="Una colección de objetos geométricos de cualquier tipo">GEOMETRYCOLLECTION</option></optgroup>
+            </select></td>
+            <td>
+                <input id="item_param_length_0" name="item_param_length[0]" type="text" value="200">
+                <div class="enum_hint">
+                    <a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#" class="open_enum_editor" style="display: none;">
+                        <img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Editor de ENUM/SET" alt="" class="icon ic_b_edit">
+                    </a>
+                </div>
+            </td>
+            <td class="hide no_len" style="display: none;">---</td>
+            <td class="routine_param_opts_text">
+<select lang="en" dir="ltr" name="item_param_opts_text[0]">
+<option value="">Juego de caracteres</option>
+<option value=""></option>
+<option value="armscii8" title="ARMSCII-8 Armenian">armscii8</option>
+<option value="ascii" title="US ASCII">ascii</option>
+<option value="big5" title="Big5 Traditional Chinese">big5</option>
+<option value="binary" title="Binary pseudo charset">binary</option>
+<option value="cp1250" title="Windows Central European">cp1250</option>
+<option value="cp1251" title="Windows Cyrillic">cp1251</option>
+<option value="cp1256" title="Windows Arabic">cp1256</option>
+<option value="cp1257" title="Windows Baltic">cp1257</option>
+<option value="cp850" title="DOS West European">cp850</option>
+<option value="cp852" title="DOS Central European">cp852</option>
+<option value="cp866" title="DOS Russian">cp866</option>
+<option value="cp932" title="SJIS for Windows Japanese">cp932</option>
+<option value="dec8" title="DEC West European">dec8</option>
+<option value="eucjpms" title="UJIS for Windows Japanese">eucjpms</option>
+<option value="euckr" title="EUC-KR Korean">euckr</option>
+<option value="gb2312" title="GB2312 Simplified Chinese">gb2312</option>
+<option value="gbk" title="GBK Simplified Chinese">gbk</option>
+<option value="geostd8" title="GEOSTD8 Georgian">geostd8</option>
+<option value="greek" title="ISO 8859-7 Greek">greek</option>
+<option value="hebrew" title="ISO 8859-8 Hebrew">hebrew</option>
+<option value="hp8" title="HP West European">hp8</option>
+<option value="keybcs2" title="DOS Kamenicky Czech-Slovak">keybcs2</option>
+<option value="koi8r" title="KOI8-R Relcom Russian">koi8r</option>
+<option value="koi8u" title="KOI8-U Ukrainian">koi8u</option>
+<option value="latin1" title="cp1252 West European">latin1</option>
+<option value="latin2" title="ISO 8859-2 Central European">latin2</option>
+<option value="latin5" title="ISO 8859-9 Turkish">latin5</option>
+<option value="latin7" title="ISO 8859-13 Baltic">latin7</option>
+<option value="macce" title="Mac Central European">macce</option>
+<option value="macroman" title="Mac West European">macroman</option>
+<option value="sjis" title="Shift-JIS Japanese">sjis</option>
+<option value="swe7" title="7bit Swedish">swe7</option>
+<option value="tis620" title="TIS620 Thai">tis620</option>
+<option value="ucs2" title="UCS-2 Unicode">ucs2</option>
+<option value="ujis" title="EUC-JP Japanese">ujis</option>
+<option value="utf16" title="UTF-16 Unicode">utf16</option>
+<option value="utf16le" title="UTF-16LE Unicode">utf16le</option>
+<option value="utf32" title="UTF-32 Unicode">utf32</option>
+<option value="utf8" title="UTF-8 Unicode">utf8</option>
+<option value="utf8mb4" title="UTF-8 Unicode">utf8mb4</option>
+</select>
+            </td>
+            <td class="hide no_opts" style="display: none;">---</td>
+            <td class="routine_param_opts_num" style="display: none;">
+                <select name="item_param_opts_num[0]">
+                    <option value=""></option><option>UNSIGNED</option><option>ZEROFILL</option><option>UNSIGNED ZEROFILL</option>
+                </select>
+            </td>
+            <td class="routine_param_remove hide" style="display: table-cell;">
+                <a href="https://auth-db135.hostinger.com/db_routines.php?server=1&amp;db=u327793104_hd&amp;type=PROCEDURE#" class="routine_param_remove_anchor">
+                    <span class="nowrap"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+        </table>    </td></tr><tr>    <td>&nbsp;</td>    <td>        <input style="width: 100%;" type="button" name="routine_addparameter" value="Agregar parámetro">            </td></tr><tr class="routine_return_row hide">    <td>Retornar el tipo</td>    <td><select name="item_returntype"><option title="Un entero de 4 bytes; el rango con signo es de 2147483648 a 2147483647, el rango sin signo es de 0 a 4294967295">INT</option><option title="Una cadena de longitud variable (0-65,535), la longitud máxima está asociada al tamaño máximo de un registro">VARCHAR</option><option title="Una columna de texto con una longitud máxima de 65535 (2^16 - 1) caracteres, almacenado con un prefijo de 2 bytes que indica la longitud del valor en bytes">TEXT</option><option title="Una fecha, el rango válido es de «1000-01-01» a «9999-12-31»">DATE</option><optgroup label="Numérico"><option title="Un entero de 1 byte; el rango con signo es de -128 a 127, el rango sin signo es de 0 a 255">TINYINT</option><option title="Un entero de 2 bytes; el rango con signo es de -32768 a 32767, el rango sin signo es de 0 a 65535">SMALLINT</option><option title="Un entero de 3 bytes; el rango con signo es de -8388608 a 8388607, el rango sin signo es de 0 a 16777215">MEDIUMINT</option><option title="Un entero de 4 bytes; el rango con signo es de 2147483648 a 2147483647, el rango sin signo es de 0 a 4294967295">INT</option><option title="En entero de 8 bytes; el rango con signo es de -9223372036854775808 a 9223372036854775807, el rango sin signo es de 0 a 18446744073709551615">BIGINT</option><option disabled="disabled">-</option><option title="Un número decimal fijo (M, D) - la mayor cantidad de dígitos (M) es 65 (valor predeterminado de 10), el mayor número posible de decimales (D) es 30 (valor predeterminado de 0)">DECIMAL</option><option title="Un número de coma flotante pequeño; los valores posibles son de -3.402823466E+38 a -1.175494351E-38, 0 y de 1.175494351E-38 a 3.402823466E+38">FLOAT</option><option title="Un número de coma flotante de precisión doble; los valores permitidos son de -1.7976931348623157E+308 a -2.2250738585072014E-308, 0 y de 2.2250738585072014E-308 a 1.7976931348623157E+308">DOUBLE</option><option title="Sinónimo de DOUBLE (excepción: si el modo SQL «REAL_AS_FLOAT» está activo es sinónimo de FLOAT)">REAL</option><option disabled="disabled">-</option><option title="Una máscara de bits (M), almacenando M bits por valor (valor predeterminado de 1, máximo de 64)">BIT</option><option title="Sinónimo de TINYINT(1), un valor de cero es considerado falso, cualquier valor distinto de cero es considerado verdadero">BOOLEAN</option><option title="Un sinónimo de BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE">SERIAL</option></optgroup><optgroup label="Fecha y marca temporal"><option title="Una fecha, el rango válido es de «1000-01-01» a «9999-12-31»">DATE</option><option title="Una combinación de fecha y marca temporal, el rango válido es de «1000-01-01 00:00:00» a «9999-12-31 23:59:59»">DATETIME</option><option title="Una marca temporal; el rango es de «01-Ene-1970 00:00:01» UTC a «09-Ene-2038 03:14:07» UTC almacenados como la cantidad de segundos desde el «epoch» («01-Ene-1970 00:00:00» UTC)">TIMESTAMP</option><option title="Una marca temporal, el rango es de «-838:59:59» a «838:59:59»">TIME</option><option title="Un año en formato de cuatro dígitos (4, el valor predeterminado) o dos dígitos (2); los valores posibles son de 70 (1970) a 69 (2069) ó de 1901 a 2155 y 0000">YEAR</option></optgroup><optgroup label="Cadena"><option title="Una cadena de longitud fija (de 0 a 255, valor predeterminado de 1) que es siempre completada a la derecha con espacios hasta la longitud especificada al ser almacenada">CHAR</option><option title="Una cadena de longitud variable (0-65,535), la longitud máxima está asociada al tamaño máximo de un registro">VARCHAR</option><option disabled="disabled">-</option><option title="Una columna de texto con una longitud máxima de 255 (2^8 - 1) caracteres, almacenado con un prefijo de 1 byte que indica la longitud del valor en bytes">TINYTEXT</option><option title="Una columna de texto con una longitud máxima de 65535 (2^16 - 1) caracteres, almacenado con un prefijo de 2 bytes que indica la longitud del valor en bytes">TEXT</option><option title="Una columna de texto con una longitud máxima de 16777215 (2^24 - 1) caracteres, almacenado con un prefijo de 3 bytes que indica la longitud del valor en bytes">MEDIUMTEXT</option><option title="Una columna de texto con una longitud máxima de 4294967295 ó 4Gb (2^32 - 1) caracteres, almacenado con un prefijo de 4 bytes que indica la longitud del valor en bytes">LONGTEXT</option><option disabled="disabled">-</option><option title="Similar al tipo CHAR, pero almacena cadenas binarias de bytes en lugar de cadenas de caracteres no binarios">BINARY</option><option title="Similar al tipo VARCHAR, pero almacena cadenas binarias de bytes en lugar de cadenas de caracteres no binarios">VARBINARY</option><option disabled="disabled">-</option><option title="Una columna de bloque de texto («BLOB») con una longitud máxima de 255 (2^8 - 1) bytes. Cada valor TINYBLOB es almacenado con un prefijo de 1 byte que indica la cantidad de bytes en el valor">TINYBLOB</option><option title="Una columna de bloque de texto («BLOB») con una longitud máxima de 16777215 (2^24 - 1) bytes, almacenado con un prefijo de 3 bytes que indica la longitud del valor">MEDIUMBLOB</option><option title="Una columna de bloque de texto («BLOB») con una longitud máxima de 65535 (2^16 - 1) bytes, almacenado con un prefijo de 2 bytes que indica la longitud del valor">BLOB</option><option title="Una columna de bloque de texto («BLOB») con una longitud máxima de 4294967295 (2^32 - 1) bytes (4GB), almacenado con un prefijo de 4 bytes que indica la longitud del valor">LONGBLOB</option><option disabled="disabled">-</option><option title="Una enumeración, elegida de una lista de hasta 65535 valores o el valor especial de error &#39;&#39;">ENUM</option><option title="Un único valor elegido de un conjunto de hasta 64 elementos">SET</option></optgroup><optgroup label="Espacial"><option title="Un tipo que puede almacenar una geometría de cualquier tipo">GEOMETRY</option><option title="Un punto en espacio de dos dimensiones">POINT</option><option title="Una curva con interpolación lineal entre puntos">LINESTRING</option><option title="Un polígono">POLYGON</option><option title="Una colección de puntos">MULTIPOINT</option><option title="Una colección de curvas con interpolación lineal entre puntos">MULTILINESTRING</option><option title="Una colección de polígonos">MULTIPOLYGON</option><option title="Una colección de objetos geométricos de cualquier tipo">GEOMETRYCOLLECTION</option></optgroup>    </select></td></tr><tr class="routine_return_row hide">    <td>Retornar longitud/valores</td>    <td><input type="text" name="item_returnlength" value=""></td>    <td class="hide no_len" style="display: none;">---</td></tr><tr class="routine_return_row hide">    <td>Retornar opciones</td>    <td><div style="display: none;"><select lang="en" dir="ltr" name="item_returnopts_text">
+<option value="">Juego de caracteres</option>
+<option value=""></option>
+<option value="armscii8" title="ARMSCII-8 Armenian">armscii8</option>
+<option value="ascii" title="US ASCII">ascii</option>
+<option value="big5" title="Big5 Traditional Chinese">big5</option>
+<option value="binary" title="Binary pseudo charset">binary</option>
+<option value="cp1250" title="Windows Central European">cp1250</option>
+<option value="cp1251" title="Windows Cyrillic">cp1251</option>
+<option value="cp1256" title="Windows Arabic">cp1256</option>
+<option value="cp1257" title="Windows Baltic">cp1257</option>
+<option value="cp850" title="DOS West European">cp850</option>
+<option value="cp852" title="DOS Central European">cp852</option>
+<option value="cp866" title="DOS Russian">cp866</option>
+<option value="cp932" title="SJIS for Windows Japanese">cp932</option>
+<option value="dec8" title="DEC West European">dec8</option>
+<option value="eucjpms" title="UJIS for Windows Japanese">eucjpms</option>
+<option value="euckr" title="EUC-KR Korean">euckr</option>
+<option value="gb2312" title="GB2312 Simplified Chinese">gb2312</option>
+<option value="gbk" title="GBK Simplified Chinese">gbk</option>
+<option value="geostd8" title="GEOSTD8 Georgian">geostd8</option>
+<option value="greek" title="ISO 8859-7 Greek">greek</option>
+<option value="hebrew" title="ISO 8859-8 Hebrew">hebrew</option>
+<option value="hp8" title="HP West European">hp8</option>
+<option value="keybcs2" title="DOS Kamenicky Czech-Slovak">keybcs2</option>
+<option value="koi8r" title="KOI8-R Relcom Russian">koi8r</option>
+<option value="koi8u" title="KOI8-U Ukrainian">koi8u</option>
+<option value="latin1" title="cp1252 West European">latin1</option>
+<option value="latin2" title="ISO 8859-2 Central European">latin2</option>
+<option value="latin5" title="ISO 8859-9 Turkish">latin5</option>
+<option value="latin7" title="ISO 8859-13 Baltic">latin7</option>
+<option value="macce" title="Mac Central European">macce</option>
+<option value="macroman" title="Mac West European">macroman</option>
+<option value="sjis" title="Shift-JIS Japanese">sjis</option>
+<option value="swe7" title="7bit Swedish">swe7</option>
+<option value="tis620" title="TIS620 Thai">tis620</option>
+<option value="ucs2" title="UCS-2 Unicode">ucs2</option>
+<option value="ujis" title="EUC-JP Japanese">ujis</option>
+<option value="utf16" title="UTF-16 Unicode">utf16</option>
+<option value="utf16le" title="UTF-16LE Unicode">utf16le</option>
+<option value="utf32" title="UTF-32 Unicode">utf32</option>
+<option value="utf8" title="UTF-8 Unicode">utf8</option>
+<option value="utf8mb4" title="UTF-8 Unicode">utf8mb4</option>
+</select>
+    </div>    <div><select name="item_returnopts_num">        <option value=""></option><option>UNSIGNED</option><option>ZEROFILL</option><option>UNSIGNED ZEROFILL</option>    </select></div>    <div class="hide no_opts" style="display: none;">---</div></td></tr><tr>    <td>Definición</td>    <td><textarea name="item_definition" rows="15" cols="40" style="display: none;">BEGIN
+DECLARE countCorreo INT;
+SELECT count(email) INTO countCorreo
+FROM USUARIO
+WHERE email = p_email;
+END</textarea><div class="CodeMirror cm-s-default CodeMirror-wrap ui-resizable CodeMirror-focused" style="resize: vertical;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 69px; left: 209.922px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 46px; margin-bottom: 0px; border-right-width: 30px; min-height: 99px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>6</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 163.922px; top: 65px; height: 13px;">&nbsp;</div></div><div class="CodeMirror-code" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">1</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">BEGIN</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">2</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">DECLARE</span> countCorreo <span class="cm-builtin">INT</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">3</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">SELECT</span> <span class="cm-keyword">count</span>(email) <span class="cm-keyword">INTO</span> countCorreo</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">4</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">FROM</span> USUARIO</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">5</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">WHERE</span> email = p_email;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">6</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">SET</span> existe = countCorreo;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">7</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">END</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 99px;"></div><div class="CodeMirror-gutters" style="height: 129px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div></div></td></tr><tr>    <td>Es determinístico</td>    <td><input type="checkbox" name="item_isdeterministic"></td></tr><tr>    <td>Ajustar privilegios<a href="https://auth-db135.hostinger.com/doc/html/faq.html#faq6-39" target="documentation"><img src="./auth-db135.hostinger.com _ localhost _ u327793104_hd _ phpMyAdmin 4.7.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a></td>    <td><input type="checkbox" name="item_adjust_privileges" value="1" title="Sin privilegios suficientes para realizar esta operación; Por favor, consulte la documentación para más detalles" disabled=""></td></tr><tr>    <td>Definidor</td>    <td><input type="text" name="item_definer" value="`u327793104_hd`@`localhost`"></td></tr><tr>    <td>Tipo de seguridad</td>    <td><select name="item_securitytype">        <option value="DEFINER" selected="selected">DEFINER</option>        <option value="INVOKER">INVOKER</option>    </select></td></tr><tr>    <td>Acceso de datos SQL</td>    <td><select name="item_sqldataaccess">        <option>NO SQL</option>        <option selected="selected">CONTAINS SQL</option>        <option>READS SQL DATA</option>        <option>MODIFIES SQL DATA</option>    </select></td></tr><tr>    <td>Comentario</td>    <td><input type="text" name="item_comment" maxlength="64" value=""></td></tr></tbody></table></fieldset><input type="hidden" name="editor_process_edit" value="true"><input type="hidden" name="ajax_request" value="true"></form><!-- END EDIT ROUTINE FORM --></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Continuar</button><button type="button" class="ui-button ui-corner-all ui-widget">Cerrar</button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div class="ui-widget-overlay ui-front" style="z-index: 100;"></div></body></html>
