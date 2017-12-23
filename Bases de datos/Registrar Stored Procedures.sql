@@ -17,3 +17,33 @@ SELECT LAST_INSERT_ID();
 END $$
 DELIMITER ;
 
+DELIMITER $$
+CREATE PROCEDURE sp_Valida_Correo(IN correo_p VARCHAR(200))
+BEGIN
+SELECT COUNT(Email) AS Existe FROM USUARIO WHERE Email = correo_p;
+END $$
+DELIMITER ;
+
+BEGIN
+    DECLARE contrasenaAlmacenada VARCHAR(100);
+    DECLARE countCorreo INT;
+
+    SELECT count(Email) INTO countCorreo
+    FROM USUARIO
+    WHERE Email = p_email;
+
+    IF countCorreo >0 THEN
+      SELECT contrasena INTO contrasenaAlmacenada
+      FROM USUARIO
+      WHERE Email = p_email;
+
+      IF contrasenaAlmacenada = p_password THEN
+        SELECT @b_esCorrecto :=  usuarioID FROM USUARIO WHERE Email = p_email;
+      ELSE
+        SELECT @b_esCorrecto := -1;
+      END IF;
+    ELSE
+      SELECT @b_esCorrecto := -1;
+    END IF;
+END
+
