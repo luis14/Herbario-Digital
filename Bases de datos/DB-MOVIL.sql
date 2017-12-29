@@ -39,29 +39,29 @@ CREATE TABLE RECOLECTA(
     FOREIGN KEY (f_giraID) REFERENCES GIRA(giraID),
     PRIMARY KEY (recolectaID)
 )Engine=InnoDB;
-CREATE TABLE MUESTRA(
-    muestraID INT NOT NULL auto_increment,
+CREATE TABLE MUESTRABITACORA(
+    muestraBitacoraID INT NOT NULL auto_increment,
     fecha DATE,
     f_recolectaID INT,
     f_especieID INT,
     FOREIGN KEY (f_recolectaID) REFERENCES RECOLECTA(recolectaID),
-    FOREIGN KEY (f_especieID) REFERENCES HERBARIODIGITAL.ESPECIE(especieID),
-    PRIMARY KEY (muestraID)
+    FOREIGN KEY (f_especieID) REFERENCES ESPECIE(especieID),
+    PRIMARY KEY (muestraBitacoraID)
 )Engine=InnoDB;
 
 CREATE TABLE IMAGENBITACORA(
     imagenBitacoraID INT NOT NULL auto_increment,
     imagenURL VARCHAR(200),
-    f_muestaID INT,
-    FOREIGN KEY (f_muestaID) REFERENCES MUESTRA(muestraID),
+    f_muestraBitacoraID INT,
+    FOREIGN KEY (f_muestraBitacoraID) REFERENCES MUESTRABITACORA(muestraBitacoraID),
     PRIMARY KEY (imagenBitacoraID)
 )Engine=InnoDB;
 
-CREATE TABLE UBICACIONGPS(
-    ubicaciongGpsID INT NOT NULL auto_increment,
+CREATE TABLE UBICACIONGPSBITACORA(
+    ubicaciongGpsBitacoraID INT NOT NULL auto_increment,
     latitud VARCHAR(100),
     longitud VARCHAR(100),
-    f_muestraID INT,
-    FOREIGN KEY (f_muestaID) REFERENCES MUESTRA(muestaID),
+    f_muestraBitacoraID INT,
+    FOREIGN KEY (f_muestraBitacoraID) REFERENCES MUESTRABITACORA(muestraBitacoraID),
     PRIMARY KEY (ubicaciongGpsID)
 )Engine=InnoDB;

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/imageList.css">
     <link rel="stylesheet" href="assets/css/Map-Clean.css">
     <link rel="stylesheet" href="assets/css/Navbar-Chunky.css">
@@ -72,7 +74,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <h4 class="text-left">Saurauia floccifera Triana Pland</h4>
                     <div class="table-responsive">
-                        <table class="table table-no-border">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th>Clasificación </th>
@@ -99,7 +101,7 @@
                         </table>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-no-border">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th>Descripción </th>
@@ -118,25 +120,21 @@
                     <button class="btn btn-info pull-right" type="button" data-toggle="modal" data-target="#imgCompare">Comparar </button>
                     <div>
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">Características </a></li>
-                            <li><a href="#tab-2" role="tab" data-toggle="tab">Muestras </a></li>
+                            <li><a href="#tab-1" role="tab" data-toggle="tab">Características </a></li>
+                            <li class="active"><a href="#tab-2" role="tab" data-toggle="tab">Muestras </a></li>
                         </ul>
-                        <div class="tab-content" style="    border-width: 1px;
-    border-color: #dddddd;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-right-style: solid;">
-                            <div class="tab-pane active" role="tabpanel" id="tab-1">
+                        <div class="tab-content">
+                            <div class="tab-pane" role="tabpanel" id="tab-1">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <br/>
 <br/>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                        <div class="row margin-down">
-                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
                                             <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9">
-                                                <div class="row ">
+                                                <div class="row">
                                                     <div class="col-md-12">
                                                         <h4 class="text-nowrap">Característica </h4></div>
                                                 </div>
@@ -145,10 +143,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row margin-down">
-                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
                                             <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9">
-                                                <div class="row ">
+                                                <div class="row">
                                                     <div class="col-md-12">
                                                         <h4 class="text-nowrap">Característica </h4></div>
                                                 </div>
@@ -157,10 +155,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row margin-down">
-                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
                                             <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9">
-                                                <div class="row ">
+                                                <div class="row">
                                                     <div class="col-md-12">
                                                         <h4 class="text-nowrap">Característica </h4></div>
                                                 </div>
@@ -169,10 +167,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row margin-down">
-                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"><img class="img-circle img-responsive" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.57 PM.jpeg" width="60" style="margin-left:3px;"></div>
                                             <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9">
-                                                <div class="row ">
+                                                <div class="row">
                                                     <div class="col-md-12">
                                                         <h4 class="text-nowrap">Característica </h4></div>
                                                 </div>
@@ -221,7 +219,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" role="tabpanel" id="tab-2">
+                            <div class="tab-pane active" role="tabpanel" id="tab-2">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="dropdown pull-right" style="margin-top:10px;">
@@ -308,9 +306,12 @@
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src=" https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/imageController.js"></script>
     <script src="assets/js/jquery.panzoom.js"></script>
     <script src="assets/js/mapController.js"></script>
+    <script src="assets/js/tableController.js"></script>
 </body>
 
 </html>

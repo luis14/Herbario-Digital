@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/imageList.css">
     <link rel="stylesheet" href="assets/css/Map-Clean.css">
     <link rel="stylesheet" href="assets/css/Navbar-Chunky.css">
@@ -46,13 +48,8 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-3 col-xs-1"></div>
                 <div class="col-lg-6 col-md-4 col-sm-6 col-xs-10">
-                    <div class="input-group">
-                        <input type="search" class="form-control" style="width:100%;height:60px;font-size:17px;padding: 10px;" placeholder=" Buscar por familia, género, nombre común o científico">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                    </div>
+                    <input type="text" style="width:100%;height:60px;">
                 </div>
-
-
                 <div class="col-lg-3 col-md-4 col-sm-3 col-xs-1"></div>
             </div>
             <div class="row" style="margin-top:2%;">
@@ -63,12 +60,11 @@
                             <h4 class="text-right">Buscar por:</h4></div>
                         <div class="col-md-6">
                             <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Seleccionar <span class="caret"></span></button>
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Seleccione una opción<span class="caret"></span></button>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li role="presentation"><a href="#">Familia</a></li>
-                                    <li role="presentation"><a href="#">Género</a></li>
-                                    <li role="presentation"><a href="#">Nombre común</a></li>
-                                    <li role="presentation"><a href="#">Nombre científico</a></li>
+                                    <li role="presentation"><a href="#">First Item</a></li>
+                                    <li role="presentation"><a href="#">Second Item</a></li>
+                                    <li role="presentation"><a href="#">Third Item</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -80,9 +76,12 @@
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src=" https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/imageController.js"></script>
     <script src="assets/js/jquery.panzoom.js"></script>
     <script src="assets/js/mapController.js"></script>
+    <script src="assets/js/tableController.js"></script>
 </body>
 
 </html>

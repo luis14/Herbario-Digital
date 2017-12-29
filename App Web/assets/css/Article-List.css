@@ -113,44 +113,7 @@ div.row.glosaryElement {
   margin:3%;
   border-style:groove;
 }
-.panel-hidden{
-    padding: 0px;
-}
-#iconLista{
-    margin-left: 15px;
-    margin-right: 15px;
-}
-li a span{
-    color: #4DA7A4;
-    text-decoration: none;
 
-}
-
-.glosaryElementcolor{
-    background-color: #F6F6F6;
-}
-.margin-down{
-    margin-bottom: 5%;
-}
-table.table-no-border tr td, table.table-no-border tr th {
-    border-style:none;
-}
-.item-no-border{
-    border-style: none;
-}
-.item-right-border{
-    border-right-style: solid;
-}
-a:hover, a:visited, a:link, a:active{
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
-}
-.panel-heading-line-bottom{
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #dddddd;
-}
 a.btn.btn-default.btn-xs.pull-right {
   margin-top:-3%;
 }
@@ -163,6 +126,15 @@ input#search {
   margin-left:10%;
 }
 
+ul.list-group {
+  margin-left:10%;
+}
+
 div.col-md-12.infoVisible {
   margin-bottom:5%;
 }
+
+button.btn.btn-default.pull-right {
+  margin:2%;
+}
+

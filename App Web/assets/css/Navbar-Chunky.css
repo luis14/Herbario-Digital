@@ -3,11 +3,11 @@ header {
 }
 
 .navbar.navbar-default {
-  height:65px;
+  height:70px;
 }
 
 .nav.navbar-nav {
-  height:60px;
+  height:70px;
 }
 
 .navbar-brand.navbar-link {
@@ -15,11 +15,11 @@ header {
 }
 
 .nav.navbar-nav li {
-  height:65px;
+  height:70px;
 }
 
 .nav.navbar-nav a {
-  height:65px;
+  height:70px;
   padding-top:40px;
 }
 
@@ -31,3 +31,4 @@ header {
 .btn.btn-default.action-button {
   margin-right:10px;
 }
+
