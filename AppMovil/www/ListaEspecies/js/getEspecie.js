@@ -36,7 +36,7 @@
 
             var a = $("<a></a>");
             a.addClass("widget-list-link");
-            a.attr("href","../registrar/registrar.html");
+            a.attr("href","../upload/samples/index.html");
             a.html(named);
 
             var li = $("<li></li>");
