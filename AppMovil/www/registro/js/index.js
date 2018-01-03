@@ -25,3 +25,28 @@ $('.click').click(function() {
 		},1000)
 	}
 })
+
+	function getCredenciales(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                myArr = JSON.parse(this.responseText);
+                if (myArr.length > 0 ) {
+                  arrCredencial = [];
+                  arrCredencial.push(myArr[0].username)
+                  arrCredencial.push(myArr[0].resultado)
+                  addItem(arrCredencial);
+                }
+            }
+        };
+        xmlhttp.open("GET", "http://herbariodigital.xyz/AppMovil/php/getCredenciales.php", true);
+        xmlhttp.send();
+    }
+
+    function addItem(credencial){
+         
+        var named = credencial[0];
+        $("#username").html(named);
+            
+    }
+
