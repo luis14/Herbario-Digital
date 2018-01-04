@@ -33,7 +33,7 @@ CREATE TABLE PERSONASXGIRA(
 )Engine=InnoDB;
 
 DELIMITER $$
-CREATE PROCEDURE sp_Insertar_Bitacora(IN nombreComun_p VARCHAR(200), IN nombreCientifico_p VARCHAR(200), IN fecha_p DATE, IN lugar_p VARCHAR(200), 
+    CREATE PROCEDURE sp_Insertar_Bitacora(IN nombreComun_p VARCHAR(200), IN nombreCientifico_p VARCHAR(200), IN fecha_p DATE, IN lugar_p VARCHAR(200), 
     IN observacionFuste_p VARCHAR(200), IN observacionHoja_p VARCHAR(200), IN observacionSemilla_p VARCHAR(200), IN observacionFlor_p VARCHAR(200),
     IN observacionExtra_p VARCHAR(200), IN f_personaID_p INT, IN flagfavorito_p CHAR(1), OUT UltimoID INT)
     BEGIN
@@ -42,13 +42,23 @@ CREATE PROCEDURE sp_Insertar_Bitacora(IN nombreComun_p VARCHAR(200), IN nombreCi
     VALUES(nombreComun_p, nombreCientifico_p, fecha_p, lugar_p, observacionFuste_p, observacionHoja_p, observacionSemilla_p, observacionFlor_p,
     observacionExtra_p, f_personaID_p, flagfavorito_p);
     SET UltimoID = LAST_INSERT_ID();
-END $$
+    END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE sp_Insertar_FOTOPORBITACORA(IN nombre_p VARCHAR(200), IN urlServer_p VARCHAR(1000),IN descripcion_p VARCHAR(2000), IN f_bitacoraID_p VARCHAR(200))
+    CREATE PROCEDURE sp_Insertar_FOTOPORBITACORA(IN nombre_p VARCHAR(200), IN urlServer_p VARCHAR(1000),IN descripcion_p VARCHAR(2000), IN f_bitacoraID_p VARCHAR(200))
+    BEGIN
+    INSERT INTO FOTOPORBITACORA(nombre,urlServer,descripcion,f_bitacoraID)
+    VALUES(nombre_p, urlServer_p, descripcion_p, f_bitacoraID_p);
+    END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE sp_Get_InfoBitacora()
 BEGIN
-INSERT INTO FOTOPORBITACORA(nombre,urlServer,descripcion,f_bitacoraID)
-VALUES(nombre_p, urlServer_p, descripcion_p, f_bitacoraID_p);
+SELECT nombreComun,nombreCientifico,fecha,lugar,observacionFuste,observacionHoja,observacionSemilla,observacionFlor,observacionExtra,flagFavorito,
+urlServer,descripcion
+FROM BITACORA
+INNER JOIN FOTOPORBITACORA ON BITACORA.bitacoraID = FOTOPORBITACORA.f_bitacoraID
 END $$
 DELIMITER ;
