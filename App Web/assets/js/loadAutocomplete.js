@@ -15,33 +15,6 @@
     //    verificarSiTienePaquete(this.options[this.selectedIndex].value);
     };
 
-    function verificarSiTienePaquete(idPaciente){
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          console.log(this.responseText);
-          var array = JSON.parse(this.responseText);
-          var smallText = document.getElementById('textInfoPaciente');
-          if (array.puedeAgendarCita == false) {
-            smallText.style.color = '#f42727';
-            smallText.style.display = 'block';
-            smallText.innerHTML = array.msj;
-          }
-          if (array.puedeAgendarCita == true) {
-            var inputPaqueteID = document.getElementById('paquetePagadoId');
-            smallText.style.color = '#28d631';
-            smallText.style.display = 'block';
-            smallText.innerHTML = array.msj;
-            inputPaqueteID.value = array.paquetePagadoId;
-
-          }
-
-        }
-      };
-      xmlhttp.open("GET", "../php/verificarSiTienePaquete.php?paciente_id=" + idPaciente, true);
-      xmlhttp.send();
-    }
-
     function cargarEspecies(){
         var criterioBusqueda = document.getElementById('criterioBusqueda').value;
         input.value = "";
