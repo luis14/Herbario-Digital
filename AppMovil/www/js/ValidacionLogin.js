@@ -49,7 +49,10 @@
                     username: u, 
                     password: p,
                   },
-                  success: function(response) {
+                  success: function(textresponse) {
+                    var JSONresponse = JSON.parse(textresponse);
+                    var response = JSONresponse.resultado;
+
                     if (response == -1){
                         alert("Contrasena o correo invalidos");
                         return false
