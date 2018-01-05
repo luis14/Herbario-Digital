@@ -50,13 +50,15 @@
                     password: p,
                   },
                   success: function(textresponse) {
-                    var JSONresponse = JSON.parse(textresponse);
-                    var response = JSONresponse.resultado;
+                    respuesta = JSON.parse(textresponse);
 
-                    if (response == -1){
+                    if (respuesta.length == 0) {
                         alert("Contrasena o correo invalidos");
                         return false
+
                     } else {
+                        localStorage.id = respuesta[0].id;
+                        localStorage.username = respuesta[0].username;
                         window.location.replace("registro/registro.html");
 
                     }

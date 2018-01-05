@@ -24,12 +24,32 @@
         	var texto = 'Campo \'Nombre\' vacio'
         }
 
+        if (nombre.length < 2){
+            var texto = 'Campo \'Nombre\' muy corto'
+        }
+
+        if (nombre.length > 25){
+            var texto = 'Campo \'Nombre\' muy largo'
+        }
+
         if (apellido1 == '' && texto == null){
-        	var texto = 'Campo \'Apellido\' vacio'
+        	var texto = 'Campo \'Primer Apellido\' vacio'
+        }
+
+        if (apellido1.length < 2){
+            var texto = 'Campo \'Primer Apellido\' muy corto'
+        }
+
+        if (apellido1.length > 25){
+            var texto = 'Campo \'Primer Apellido\' muy largo'
         }
 
         if (email == '' && texto == null){
         	var texto = 'Campo \'Email\' vacio'
+        }
+
+        if (email.length > 45){
+            var texto = 'Campo \'Email\' muy largo'
         }
 
         if (contrasena == '' && texto == null){
@@ -38,6 +58,10 @@
 
         if (contrasena.length < 6 && texto == null){
         	var texto = 'Contraseña de 6 caracteres mínimo'
+        }
+
+        if (contrasena.length > 45){
+            var texto = 'Campo \'Contraseña\' muy largo'
         }
 
         if (confirmacion == '' && texto == null){
