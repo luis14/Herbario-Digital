@@ -1,23 +1,29 @@
-$('.click').click(function() {
-	if ($('span').hasClass("fa-star")) {
-			$('.click').removeClass('active')
+
+$('span').click(function() {
+	var id = $(this).attr('id');
+	var Fid = $(this).parent().attr('id');
+	ids = $('#' + id);
+	Fids = $('#' + Fid);
+	
+	if ($(ids).hasClass("fa-star")) {
+			$(Fids).removeClass('active')
 		setTimeout(function() {
-			$('.click').removeClass('active-2')
+			$(Fids).removeClass('active-2')
 		}, 30)
-			$('.click').removeClass('active-3')
+			$(Fids).removeClass('active-3')
 		setTimeout(function() {
-			$('span').removeClass('fa-star')
-			$('span').addClass('fa-star-o')
+			$(ids).removeClass('fa-star')
+			$(ids).addClass('fa-star-o')
 		}, 15)
 	} else {
-		$('.click').addClass('active')
-		$('.click').addClass('active-2')
+		$(Fids).addClass('active')
+		$(Fids).addClass('active-2')
 		setTimeout(function() {
-			$('span').addClass('fa-star')
-			$('span').removeClass('fa-star-o')
+			$(ids).addClass('fa-star')
+			$(ids).removeClass('fa-star-o')
 		}, 150)
 		setTimeout(function() {
-			$('.click').addClass('active-3')
+			$(Fids).addClass('active-3')
 		}, 150)
 		$('.info').addClass('info-tog')
 		setTimeout(function(){
@@ -25,3 +31,11 @@ $('.click').click(function() {
 		},1000)
 	}
 })
+
+
+
+
+
+
+
+

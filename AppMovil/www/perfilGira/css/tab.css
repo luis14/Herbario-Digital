@@ -57,6 +57,7 @@
       text-align: center;
       color: #bbb;
       border: 1px solid transparent;
+      width:19%;
     }
 
     label:before {
@@ -66,20 +67,25 @@
     }
 
     label[for*='1']:before {
-      content: '\f1cb';
+      content: "\f18c";
     }
 
     label[for*='2']:before {
-      content: '\f17d';
+      content: '\f06c';
     }
 
     label[for*='3']:before {
-      content: '\f16b';
+      content: "\f18c";
     }
 
     label[for*='4']:before {
-      content: '\f1a9';
+      content: "\f06c";
     }
+
+    label[for*='5']:before {
+      content: "\f18c";
+    }
+
 
     label:hover {
       color: #888;
@@ -96,7 +102,8 @@
     #tab1:checked ~ #content1,
     #tab2:checked ~ #content2,
     #tab3:checked ~ #content3,
-    #tab4:checked ~ #content4 {
+    #tab4:checked ~ #content4,
+    #tab5:checked ~ #content5 {
       display: block;
       background: #f1f3f2;
       font-family: 'Alegreya Sans', sans-serif;
