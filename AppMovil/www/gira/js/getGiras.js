@@ -32,7 +32,7 @@
             var date = Fecha[i];
             var place = Lugar[i];
             var name = Nombre[i];
-            var ids = id[i]
+            var ids = id[i];
 
             //$('#lista').append($('<li>').text(named));
             var span = $("<span></span>");

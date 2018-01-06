@@ -9,7 +9,7 @@
                     arrnombre = myArr[0].nombre;
                     arrprofesor = myArr[0].profesor;
                     arrlugar = myArr[0].lugar;
-                    addItem(arrfecha, arrnombre, arrprofesor, arrlugar);
+                    addInfo(arrfecha, arrnombre, arrprofesor, arrlugar);
                   },
                   error: function(xhr) {
                     alert('Bad action at 404');
@@ -17,7 +17,7 @@
                 });
               }
 
-    function addItem(fecha, nombre, profesor, lugar){
+    function addInfo(fecha, nombre, profesor, lugar){
             
             var img = $('<img></img>');
             img.css('position', 'absolute');
@@ -60,8 +60,82 @@
             h5_3.css('color','white');
             h5_3.html('Fecha: ' + fecha);
 
-            
             $('#infoGira').append(h5_1);
             $('#infoGira').append(h5_2);
             $('#infoGira').append(h5_3);
+    }
+
+
+    function getGiraEspecies(){
+                $.ajax({
+                  url: "http://www.herbariodigital.xyz/AppMovil/php/getGiraEspecie.php?id_persona="+localStorage.id+"&id_gira="+localStorage.GiraElecta,
+                  type: "get", //send it through get method
+
+                  success: function(textresponse) {
+                    myArr = JSON.parse(textresponse);
+                    if (myArr.length > 0) {
+                      arrID = [];
+                      arrFecha = [];
+                      arrComun = [];
+                      arrCientifico = [];
+                      for (var i = 0; i < myArr.length; i++) {
+                        arrID.push(myArr[i].id);
+                        arrFecha.push(myArr[i].fecha);
+                        arrComun.push(myArr[i].comun);
+                        arrCientifico.push(myArr[i].cientifico)
+                    }
+                    addEspecie(arrID, arrFecha, arrComun, arrCientifico);
+                  }
+                },
+                  error: function(xhr) {
+                    alert('Bad action at 404');
+                  }
+                });
+              }
+
+    function addEspecie(id, fecha, comun, cientifico){
+    var position = 123;
+    for (var i = 0; i < comun.length; i++) {
+            var cientificop = cientifico[i];
+            var comunp = comun[i];
+            var fechap = fecha[i];
+            var ids = id[i];
+
+            //$('#lista').append($('<li>').text(named));
+            var span = $("<span></span>");
+            span.html(cientificop +' · '+ fechap);
+            span.css("font-style","italic");
+            
+            var img = $("<img/>");
+            img.attr("src","flor.png");
+
+            var a = $("<a></a>");
+            a.addClass("widget-list-link");
+            a.attr("href","../perfilGira/perfil.html");
+            a.html(comunp);
+
+            var span2 = $("<span></span>");
+            span2.attr('class',"fa fa-star-o");
+
+            var div = $("<div></div>");
+            div.attr('class', 'click');
+            div.css('position','absolute');
+            div.css('right','20px');
+            div.css('top', position);
+            div.css('z-index','1');
+            div.css('font-size', '25px');
+
+            var li = $("<li></li>");
+            li.attr("id", ids);
+
+            $('#lista').append(li);
+            li.append(a);
+            a.append(img);
+            a.append(span);
+            li.append(div);
+            div.append(span2);
+
+            position += 57;
+        }        
+
     }
