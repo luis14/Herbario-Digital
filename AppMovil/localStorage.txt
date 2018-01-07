@@ -5,3 +5,4 @@ localStorage.plantaNueva // Planta que se va a registrar
 localStorage.id // ID del usuario en sesion actual
 localStorage.username // Nombre real del usuario en sesion
 localStorage.GiraElecta // Gira en la que se encuentra el usuario
+localStorage.MuestraID // MID de una muestra en un gira 

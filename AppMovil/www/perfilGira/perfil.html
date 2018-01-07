@@ -14,16 +14,23 @@
   <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
   <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+  <script src="../js/getProfile.js"></script>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+  <script type="text/javascript" src="js/gallery.js"></script>
 
 </head>
-<body>
-    <noscript>
+<body onload="getProfile();">
       <style>
         .es-carousel ul{
           display:block;
         }
       </style>
     </noscript>
+
 
     <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">  
       <div class="rg-image-wrapper">
@@ -33,7 +40,6 @@
         {{/if}}
         
         <div class="rg-image"></div>
-        <div class="rg-loading"></div>
         <div class="rg-caption-wrapper">
           <div class="rg-caption" style="display:none;">
             <p></p>
@@ -43,25 +49,8 @@
     </script>
 
      <div class="footer" style ="z-index:2;">
-        <div class="footer_contents">
-
-        <div class="colm" align = "center"> 
-          <a align = "center">
-              <img align = "center" style ="margin: 5px; position: relative; height: 30px; width: 32px; top: 10px;" src="flor.png"/>
-            <a>
-        </div>
-        
-
-        <div class="column" align = "center"> 
-            <H4 color ="white" style ="position: relative; top:13px; color: white;"> Jocote </H5>
-            <H6 color ="white" style ="position: relative; top:17px; color: white;"> Satordiporea Omniverea </H6>
-        </div>
-
-        <div class="colm" align = "center"> 
-          <a align = "center" href="../ventanaGira/ventanagira.html">
-              <img align = "center" style ="margin: 5px; position: relative; height: 28px; width: 28px; top: 10px;" src="volver.png"/>
-            <a>
-        </div>
+        <div  id = 'heads' class="footer_contents">
+          
         
         </div>
       </div>
@@ -69,39 +58,17 @@
 
 
 
-    <div class="content">
+    <div id='contenido' class="content">
         <div id="rg-gallery" class="rg-gallery">
             <div class="es-carousel-wrapper">
               <div class="es-nav">
                 <span class="es-nav-prev">Previous</span>
                 <span class="es-nav-next">Next</span>
               </div>
+
               <div class="es-carousel">
-                <ul>
-                  <li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/2.jpg" data-large="images/2.jpg" alt="image02" data-description="A plaintful story from a sistering vale" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/3.jpg" data-large="images/3.jpg" alt="image03" data-description="A plaintful story from a sistering vale" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/4.jpg" data-large="images/4.jpg" alt="image04" data-description="My spirits to attend this double voice accorded" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/5.jpg" data-large="images/5.jpg" alt="image05" data-description="And down I laid to list the sad-tuned tale" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/6.jpg" data-large="images/6.jpg" alt="image06" data-description="Ere long espied a fickle maid full pale" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/7.jpg" data-large="images/7.jpg" alt="image07" data-description="Tearing of papers, breaking rings a-twain" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/8.jpg" data-large="images/8.jpg" alt="image08" data-description="Storming her world with sorrow's wind and rain" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/9.jpg" data-large="images/9.jpg" alt="image09" data-description="Upon her head a platted hive of straw" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/10.jpg" data-large="images/10.jpg" alt="image10" data-description="Which fortified her visage from the sun" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/11.jpg" data-large="images/11.jpg" alt="image11" data-description="Whereon the thought might think sometime it saw" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/12.jpg" data-large="images/12.jpg" alt="image12" data-description="The carcass of beauty spent and done" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/13.jpg" data-large="images/13.jpg" alt="image13" data-description="Time had not scythed all that youth begun" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/14.jpg" data-large="images/14.jpg" alt="image14" data-description="Nor youth all quit; but, spite of heaven's fell rage" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/15.jpg" data-large="images/15.jpg" alt="image15" data-description="Some beauty peep'd through lattice of sear'd age" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/16.jpg" data-large="images/16.jpg" alt="image16" data-description="Oft did she heave her napkin to her eyne" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/17.jpg" data-large="images/17.jpg" alt="image17" data-description="Which on it had conceited characters" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/18.jpg" data-large="images/18.jpg" alt="image18" data-description="Laundering the silken figures in the brine" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/19.jpg" data-large="images/19.jpg" alt="image19" data-description="That season'd woe had pelleted in tears" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/20.jpg" data-large="images/20.jpg" alt="image20" data-description="And often reading what contents it bears" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/21.jpg" data-large="images/21.jpg" alt="image21" data-description="As often shrieking undistinguish'd woe" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/22.jpg" data-large="images/22.jpg" alt="image22" data-description="In clamours of all size, both high and low" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/23.jpg" data-large="images/23.jpg" alt="image23" data-description="Sometimes her levell'd eyes their carriage ride" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/24.jpg" data-large="images/24.jpg" alt="image24" data-description="As they did battery to the spheres intend" /></a></li>
+                <ul id='lista'>
+
                 </ul>
               </div>
             </div>
@@ -109,39 +76,16 @@
         </div><!-- rg-gallery -->
       </div><!-- content -->
     </div><!-- container -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
-    <script type="text/javascript" src="js/gallery.js"></script>
-
-
-
-
-
-
-
 
 
 
     <div class="caract" style ="z-index:2; margin-bottom: 8px">
-        <div class="footer_contents">
+        <div id='recolectainfo' class="footer_contents">
 
-        <div class="column3" align = "center"> 
-          <H4 color ="white" style ="position: relative; top:13px; color: white;"> Fecha </H5>
-          <H6 color ="white" style ="position: relative; top:17px; color: white;"> 23 Julio, 2017 </H6>
-        </div>
-        
-
-        <div class="column3" align = "center"> 
-          <H4 color ="white" style ="position: relative; top:13px; color: white;"> Lugar </H5>
-          <H6 color ="white" style ="position: relative; top:17px; color: white;"> Barrio Lujan de pastillos, Paraiso, Cartago, Costa Rica, Bacon ipsum dolor sit amet beef venison beef ribs kielbasa.</H6>
-        </div> 
         </div>
       </div>
 
 
-  
   <input id="tab1" type="radio" name="tabs" checked>
   <label for="tab1">Fuste</label>
     
@@ -149,7 +93,7 @@
   <label for="tab2">Hoja</label>
     
   <input id="tab3" type="radio" name="tabs">
-  <label for="tab3">Semilla</label>
+  <label for="tab3">Fruto</label>
     
   <input id="tab4" type="radio" name="tabs">
   <label for="tab4">Flor</label>
@@ -157,51 +101,17 @@
   <input id="tab5" type="radio" name="tabs">
   <label for="tab5">Extra</label>
     
-  <section id="content1">
-    <p>
-      Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-    </p>
-    <p>
-      Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-    </p>
-  </section>
+  <section id="content1"> </section>
     
-  <section id="content2">
-    <p>
-      Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
-    </p>
-    <p>
-      Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-    </p>
-  </section>
+  <section id="content2"> </section>
     
-  <section id="content3">
-    <p>
-      Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-    </p>
-    <p>
-      Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-    </p>
-  </section>
+  <section id="content3"> </section>
     
-  <section id="content4" >
-    <p>
-      Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
-    </p>
-    <p>
-      Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-    </p>
-  </section>
+  <section id="content4"> </section>
 
-  <section id="content5" >
-     <p>
-      Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-    </p>
-    <p>
-      Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-    </p>
-  </section>
+  <section id="content5">  </section>
 
+  
   <style type="text/css">
 
 

@@ -78,13 +78,15 @@
                       arrFecha = [];
                       arrComun = [];
                       arrCientifico = [];
+                      arrUrl = [];
                       for (var i = 0; i < myArr.length; i++) {
                         arrID.push(myArr[i].id);
                         arrFecha.push(myArr[i].fecha);
                         arrComun.push(myArr[i].comun);
                         arrCientifico.push(myArr[i].cientifico)
+                        arrUrl.push(myArr[i].url)
                     }
-                    addEspecie(arrID, arrFecha, arrComun, arrCientifico);
+                    addEspecie(arrID, arrFecha, arrComun, arrCientifico, arrUrl);
                   }
                 },
                   error: function(xhr) {
@@ -93,11 +95,15 @@
                 });
               }
 
-    function addEspecie(id, fecha, comun, cientifico){
+
+
+
+    function addEspecie(id, fecha, comun, cientifico, url){
     var position = 123;
     for (var i = 0; i < comun.length; i++) {
             var cientificop = cientifico[i];
             var comunp = comun[i];
+            var url = url[i];
             var fechap = fecha[i];
             var ids = id[i];
 
@@ -107,7 +113,7 @@
             span.css("font-style","italic");
             
             var img = $("<img/>");
-            img.attr("src","flor.png");
+            img.attr("src", url);
 
             var a = $("<a></a>");
             a.addClass("widget-list-link");
@@ -137,5 +143,14 @@
 
             position += 57;
         }        
-
     }
+
+    $(document).on('click','li',function(){
+        x = $(this).attr('id');
+        localStorage.MuestraID = x;
+    });
+
+
+
+
+

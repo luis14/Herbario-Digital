@@ -248,13 +248,31 @@ $(function() {
 		};
 	
 	})();
-
 	Gallery.init();
+	LoadPhotos();
 	
-	/*
-	Example to add more items to the gallery:
-	
-	var $new  = $('<li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>');
-	Gallery.addItems( $new );
-	*/
+
+	function LoadPhotos(){
+        var arrUrl = new Object();
+        var arrDescripcion = new Object();
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                myArr = JSON.parse(this.responseText);
+                if (myArr.length > 0 ) {
+                  
+                 for (var i = 0; i < myArr.length; i++) {
+                        var $new  = $('<li><a href="#"><img src="'+myArr[i].url+'" style= "height:65; width:65" data-large= "'+myArr[i].url+'" data-description="'+myArr[i].descripcion+'"/></a></li>');
+                        Gallery.addItems( $new );
+                    }
+
+                }
+
+            }
+        };
+        xmlhttp.open("GET", "http://herbariodigital.xyz/AppMovil/php/getPerfilPhotos.php?id_bitacora="+localStorage.MuestraID, true);
+        xmlhttp.send();
+    }
+
+
 });
