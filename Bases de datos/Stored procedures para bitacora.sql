@@ -11,7 +11,9 @@ CREATE TABLE BITACORA(
     observacionExtra VARCHAR(2000),
     f_personaID INT,
     flagFavorito CHAR(1),
+    f_giraID INT
     FOREIGN KEY bitacora_persona(f_personaID) REFERENCES PERSONA(personaID) ON DELETE SET NULL ON UPDATE CASCADE,
+    FOREIGN KEY bitacora_gira(f_giraID) REFERENCES GIRA(personaID) ON DELETE SET NULL ON UPDATE CASCADE,
     PRIMARY KEY (bitacoraID)
 )Engine=InnoDB;
 
@@ -33,16 +35,16 @@ CREATE TABLE PERSONASXGIRA(
 )Engine=InnoDB;
 
 DELIMITER $$
-    CREATE PROCEDURE sp_Insertar_Bitacora(IN nombreComun_p VARCHAR(200), IN nombreCientifico_p VARCHAR(200), IN fecha_p DATE, IN lugar_p VARCHAR(200), 
-    IN observacionFuste_p VARCHAR(200), IN observacionHoja_p VARCHAR(200), IN observacionSemilla_p VARCHAR(200), IN observacionFlor_p VARCHAR(200),
-    IN observacionExtra_p VARCHAR(200), IN f_personaID_p INT, IN flagfavorito_p CHAR(1), OUT UltimoID INT)
-    BEGIN
-    INSERT INTO BITACORA(nombreComun,nombreCientifico,fecha,lugar,observacionFuste,observacionHoja,observacionSemilla,observacionFlor,observacionExtra,
-    f_personaID,flagFavorito)
-    VALUES(nombreComun_p, nombreCientifico_p, fecha_p, lugar_p, observacionFuste_p, observacionHoja_p, observacionSemilla_p, observacionFlor_p,
-    observacionExtra_p, f_personaID_p, flagfavorito_p);
-    SET UltimoID = LAST_INSERT_ID();
-    END $$
+CREATE PROCEDURE sp_Insertar_Bitacora(IN nombreComun_p VARCHAR(200), IN nombreCientifico_p VARCHAR(200), IN fecha_p DATE, IN lugar_p VARCHAR(200), 
+IN observacionFuste_p VARCHAR(200), IN observacionHoja_p VARCHAR(200), IN observacionSemilla_p VARCHAR(200), IN observacionFlor_p VARCHAR(200),
+IN observacionExtra_p VARCHAR(200), IN f_personaID_p INT, IN flagfavorito_p CHAR(1), OUT UltimoID INT)
+BEGIN
+INSERT INTO BITACORA(nombreComun,nombreCientifico,fecha,lugar,observacionFuste,observacionHoja,observacionSemilla,observacionFlor,observacionExtra,
+f_personaID,flagFavorito)
+VALUES(nombreComun_p, nombreCientifico_p, fecha_p, lugar_p, observacionFuste_p, observacionHoja_p, observacionSemilla_p, observacionFlor_p,
+observacionExtra_p, f_personaID_p, flagfavorito_p);
+SET UltimoID = LAST_INSERT_ID();
+END $$
 DELIMITER ;
 
 DELIMITER $$

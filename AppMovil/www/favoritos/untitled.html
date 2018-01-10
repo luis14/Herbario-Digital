@@ -1,0 +1,36 @@
+
+<!DOCTYPE HTML>
+<html>
+<div>
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+</div>
+</html>
+
+<style type="text/css">
+div {
+  padding: 2px;
+  background: cornflowerblue;
+  border: 2px solid lightgray;
+  border-radius: 2px;
+  display: inline-block;
+}
+div span {
+  position: relative;
+}
+div span:before {
+  content: "\2605";
+  position: absolute;
+  transition:all 0.4s;
+  color: gold;
+}
+div span:hover ~ span:before {
+  content: "\2606";
+  color: black;
+}
+
+
+</style>>

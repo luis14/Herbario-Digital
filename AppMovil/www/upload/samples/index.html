@@ -28,7 +28,6 @@
          });
          
        });
-        
     </script>
     
     <style>
@@ -134,7 +133,7 @@
       </div>  
     </div>
 
-  <div style ="background-color: #267c71; height: 93px; width:100%; margin-bottom: 3px; display:inline-block; position:relative;"> 
+  <div style ="background-color: #267c71; height: 93px; width:100%; display:inline-block; position:relative;"> 
     <textarea id ="local" style ="height: 60px; margin-top:10px;"> Locación </textarea>
     <button class="bttn" style="height: 20px; background: rgb(0,153,204); border: 2px solid rgb(0,109,146); -webkit-border-radius: 4px;
         border-radius: 4px; position:absolute; bottom:1px; right:10px; width: 25%;" onclick="getLocation()"> Localizar </button>
@@ -157,35 +156,49 @@
             ' & Longitud: ' + position.coords.longitude ;
         }
     </script>
+
+  <div id='time' style ="background-color: #267c71; height: 50px; width:100%; margin-bottom: 3px; display:inline-block; position:relative; color: white; text-align: center;">
+
+
+  </div>
+
+  <script>
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+    $('#time').append(dateTime);
+  </script>
+
     
   <section id="content1">
     <p align="center" style="text-align: center;"> OBSERVACIONES SOBRE EL FUSTE</p>
-    <textarea placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
+    <textarea id = 'fuste' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
     </textarea>
   </section>
     
   <section id="content2">
     <p align="center" style="text-align: center;"> OBSERVACIONES SOBRE LA HOJA</p>
-    <textarea placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
+    <textarea id = 'hoja' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
     
     </textarea>
   </section>
     
   <section id="content3">
     <p align="center" style="text-align: center;"> OBSERVACIONES SOBRE LA SEMILLA</p>
-    <textarea placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
+    <textarea id = 'semilla' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
     </textarea>
   </section>
     
   <section id="content4" >
    <p align="center" style="text-align: center;"> OBSERVACIONES SOBRE LA FLOR </p>
-    <textarea placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
+    <textarea id = 'flor' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
     </textarea>
   </section>
 
   <section id="content5">
     <p align="center" style="text-align: center;"> OBSERVACIONES EXTRA </p>
-    <textarea placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
+    <textarea id = 'extra' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
     </textarea>
   </section>
 
