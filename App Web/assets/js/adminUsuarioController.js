@@ -24,11 +24,11 @@ function editarAdministrador(idEditar,editCorreoElectronico,editPassword){
         if (this.readyState == 4 && this.status == 200) {
             jsonAns = JSON.parse(this.responseText);
             if (jsonAns.status ="ok" ) {
-                $('#modalEliminar').modal('hide');
+                $('#modalEditar').modal('hide');
                   location.reload();
             }
             else{
-                $('#modalEliminar').modal('hide');
+                $('#modalEditar').modal('hide');
                 alert("Algo salió mal. Reintente más tarde.");
             }
         }

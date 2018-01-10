@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
+<body onload="loadControllers()">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Brand</a>
@@ -60,37 +60,103 @@
                         <th>Imagen </th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td><span style="margin-right:10%;"><i class="glyphicon glyphicon-pencil"></i><a href="#" data-toggle="modal" data-target="#modalEditar"> Editar </a></span> <span><i class="glyphicon glyphicon-remove"></i><a href="#" data-toggle="modal" data-target="#modalEliminar"> Eliminar </a></span></td>
-                        <td>Cell 2</td>
-                        <td>Cell 2</td>
-                        <td>Cell 2</td>
-                        <td>Cell 2</td>
-                        <td>Cell 2</td>
-                        <td> <img class="img-circle" src="assets/img/WhatsApp Image 2017-12-06 at 8.45.50 PM.jpeg" width="50" height="50"></td>
-                    </tr>
+                <tbody id="tbodyAdmin">
+
                 </tbody>
             </table>
         </div>
     </div>
     <div class="modal fade" role="dialog" tabindex="-1" id="modalEliminar">
+        <input type="hidden" id="idEliminar"></input>
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                     <h4 class="modal-title">Eliminar muestra</h4></div>
                 <div class="modal-body">
-                    <p>¿Seguro que desea eliminar la muestra <em>NOMBREDELAESPECIE</em>?</p>
+                    <p>¿Seguro que desea eliminar la muestra #<strong id="ejecutivoEliminar"></strong>?</p>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default" type="button" data-dismiss="modal">Cancelar </button>
-                    <button class="btn btn-danger" type="button">Eliminar </button>
+                    <button class="btn btn-danger" type="button" id="btnEliminar">Eliminar </button>
                 </div>
             </div>
         </div>
     </div>
     <div class="modal fade" role="dialog" tabindex="-1" id="modalAgregar">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Agregar muestra</h4></div>
+                <div class="modal-body">
+                    <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <h5 for="Identificador">Identificador</h5>
+                                    <input class="form-control" type="text"  id="Identificador" name="Identificador" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <h5 for="Colector">Colector </h5>
+                                    <input class="form-control" type="text" id="Colector" name="Colector" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <h5 for="Ejecutivo">Ejecutivo </h5>
+                                    <input class="form-control" type="text" id="Ejecutivo" name="Ejecutivo" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <h5 for="Fuente">Fuente </h5>
+                                    <input class="form-control" type="text" id="Fuente" name="Fuente" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <h5 for="fecha">Fecha de recolección</h5>
+                                    <input class="form-control" type="date" id="fecha" name="fecha" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <h5 for="Especie">Especie </h5>
+                                    <select class="form-control" id="Especie" name="Especie" required>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <h5 for="imagen">Imagen </h5>
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-default btn-file">
+                                                Browse… <input type="file" id="imgInp" name="imgInp" required>
+                                            </span>
+                                        </span>
+                                        <input type="text" class="form-control" readonly>
+                                    </div>
+                                    <img id='img-upload' class="img img-responsive" height="100px" width="100px"/>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button" data-dismiss="modal">Cancelar </button>
+                    <button class="btn btn-primary" type="submit">Agregar </button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalEditar">
+        <input type="hidden" id="idEditar"></input>
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -101,56 +167,52 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
                                 <div class="form-group">
-                                    <h5 for="nombreComun">Identificador</h5>
-                                    <input class="form-control" type="text" id="nombreComun">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                <div class="form-group">
-                                    <h5 for="nombreCientifico">Colector </h5>
-                                    <input class="form-control" type="text" id="nombreCientifico">
+                                    <h5 for="Identificador">Identificador</h5>
+                                    <input class="form-control"  type="text" id="IdentificadorEDITAR" required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
                                 <div class="form-group">
-                                    <h5 for="genero">Ejecutivo </h5>
-                                    <input class="form-control" type="text">
+                                    <h5 for="Colector">Colector </h5>
+                                    <input class="form-control"  type="text" id="ColectorEDITAR" required>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <h5 for="Ejecutivo">Ejecutivo </h5>
+                                    <input class="form-control"  type="text" id="EjecutivoEDITAR" required>
+                                </div>
+                            </div>
+                        <!--    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div class="form-group">
                                     <h5 for="imagen">Imagen </h5>
                                     <div class="row">
                                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                            <input class="form-control" type="text" id="imagen">
+                                            <input class="form-control" type="text" id="imagenEDITAR">
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                                             <button class="btn btn-link" type="button">cambiar </button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            </div> -->
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
                                 <div class="form-group">
-                                    <h5 for="pubescencia">Fuente </h5>
-                                    <input class="form-control" type="text">
+                                    <h5 for="Fuente">Fuente </h5>
+                                    <input class="form-control"  type="text" id="FuenteEDITAR" required>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
                                 <div class="form-group">
-                                    <h5 for="yemaFloral">Fecha de recolección</h5>
-                                    <input class="form-control" type="date">
+                                    <h5 for="fecha">Fecha de recolección</h5>
+                                    <input class="form-control"  type="date" id="fechaEDITAR" required>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
                                 <div class="form-group">
-                                    <h5 for="procedencia">Especie </h5>
-                                    <select class="form-control" id="procedencia">
-                                        <optgroup label="This is a group">
-                                            <option value="12" selected="">This is item 1</option>
-                                            <option value="13">This is item 2</option>
-                                            <option value="14">This is item 3</option>
-                                        </optgroup>
+                                    <h5 for="Especie">Especie </h5>
+                                    <select class="form-control"  id="EspecieEDITAR" required>
+
                                     </select>
                                 </div>
                             </div>
@@ -159,81 +221,7 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default" type="button" data-dismiss="modal">Cancelar </button>
-                    <button class="btn btn-primary" type="button">Agregar </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modalEditar">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    <h4 class="modal-title">Agregar muestra</h4></div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <h5 for="nombreComun">Identificador</h5>
-                                    <input class="form-control" type="text" id="nombreComun">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                <div class="form-group">
-                                    <h5 for="nombreCientifico">Colector </h5>
-                                    <input class="form-control" type="text" id="nombreCientifico">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <h5 for="genero">Ejecutivo </h5>
-                                    <input class="form-control" type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <h5 for="imagen">Imagen </h5>
-                                    <div class="row">
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                            <input class="form-control" type="text" id="imagen">
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-                                            <button class="btn btn-link" type="button">cambiar </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <h5 for="pubescencia">Fuente </h5>
-                                    <input class="form-control" type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <h5 for="yemaFloral">Fecha de recolección</h5>
-                                    <input class="form-control" type="date">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <div class="form-group">
-                                    <h5 for="procedencia">Especie </h5>
-                                    <select class="form-control" id="procedencia">
-                                        <optgroup label="This is a group">
-                                            <option value="12" selected="">This is item 1</option>
-                                            <option value="13">This is item 2</option>
-                                            <option value="14">This is item 3</option>
-                                        </optgroup>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-default" type="button" data-dismiss="modal">Cancelar </button>
-                    <button class="btn btn-primary" type="button">Agregar </button>
+                    <button class="btn btn-primary" type="button" id="btnEditar" >Guardar cambios </button>
                 </div>
             </div>
         </div>
@@ -242,7 +230,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src=" https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-    <script src="assets/js/adminUsuarioController.js"></script>
+    <script src="assets/js/adminMuestrasController.js"></script>
 </body>
 
 </html>
