@@ -79,14 +79,17 @@
                       arrComun = [];
                       arrCientifico = [];
                       arrUrl = [];
+                      arrFav = [];
+                      arrURL = [];
                       for (var i = 0; i < myArr.length; i++) {
                         arrID.push(myArr[i].id);
                         arrFecha.push(myArr[i].fecha);
                         arrComun.push(myArr[i].comun);
-                        arrCientifico.push(myArr[i].cientifico)
-                        arrUrl.push(myArr[i].url)
+                        arrCientifico.push(myArr[i].cientifico);
+                        arrURL.push(myArr[i].url);
+                        arrFav.push(myArr[i].flag);
                     }
-                    addEspecie(arrID, arrFecha, arrComun, arrCientifico, arrUrl);
+                    addEspecie(arrID, arrFecha, arrComun, arrCientifico, arrURL, arrFav);
                   }
                 },
                   error: function(xhr) {
@@ -98,22 +101,29 @@
 
 
 
-    function addEspecie(id, fecha, comun, cientifico, url){
-    var position = 123;
+    function addEspecie(vid, fecha, comun, cientifico, URL, fav){
+    var position = 130;
     for (var i = 0; i < comun.length; i++) {
             var cientificop = cientifico[i];
             var comunp = comun[i];
-            var url = url[i];
+            var URLi = URL[i];
             var fechap = fecha[i];
-            var ids = id[i];
+            var id = vid[i];
+            var favs = fav[i];
 
             //$('#lista').append($('<li>').text(named));
+            spans = $("<span></span>");
+            spans.html(fechap);
+            spans.css("font-style","italic");
+
             var span = $("<span></span>");
-            span.html(cientificop +' · '+ fechap);
+            span.html(cientificop);
             span.css("font-style","italic");
             
             var img = $("<img/>");
-            img.attr("src", url);
+            img.attr("src", URLi);
+            img.css('height','50px');
+            img.css('width','50px');
 
             var a = $("<a></a>");
             a.addClass("widget-list-link");
@@ -122,9 +132,12 @@
 
             var span2 = $("<span></span>");
             span2.attr('class',"fa fa-star-o");
-
+            span2.attr('id', 's'+id);
+            span2.val(favs);
+            
             var div = $("<div></div>");
             div.attr('class', 'click');
+            div.attr('id','ss'+id);
             div.css('position','absolute');
             div.css('right','20px');
             div.css('top', position);
@@ -132,17 +145,53 @@
             div.css('font-size', '25px');
 
             var li = $("<li></li>");
-            li.attr("id", ids);
+            li.attr("id", id);
 
             $('#lista').append(li);
             li.append(a);
             a.append(img);
             a.append(span);
+            a.append(spans);
             li.append(div);
             div.append(span2);
 
-            position += 57;
+            ids = $('#s' + id);
+            Fids = $('#ss' + id);
+            Star(favs, Fids, ids);
+
+            position += 75;
         }        
+    }
+
+    function Star(favs, Fids, ids){
+            /*APAGADO*/
+        if (favs == 0) {
+                $(Fids).removeClass('active')
+            setTimeout(function() {
+                $(Fids).removeClass('active-2')
+            }, 30)
+                $(Fids).removeClass('active-3')
+            setTimeout(function() {
+                $(ids).removeClass('fa-star')
+                $(ids).addClass('fa-star-o')
+            }, 15)
+
+        /*ENCENDIDO*/
+        } else {
+            $(Fids).addClass('active')
+            $(Fids).addClass('active-2')
+            setTimeout(function() {
+                $(ids).addClass('fa-star')
+                $(ids).removeClass('fa-star-o')
+            }, 150)
+            setTimeout(function() {
+                $(Fids).addClass('active-3')
+            }, 150)
+            $('.info').addClass('info-tog')
+            setTimeout(function(){
+                $('.info').removeClass('info-tog')
+            },1000)
+        }
     }
 
     $(document).on('click','li',function(){
@@ -151,6 +200,17 @@
     });
 
 
+    function setEstadoFavorito(id_m, num){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+
+            }
+        };
+        xmlhttp.open("GET", "http://www.herbariodigital.xyz/AppMovil/php/setEstadoFavorito.php?id="+id_m+'&num='+num, true);
+        xmlhttp.send();
+    }
 
 
 
+            

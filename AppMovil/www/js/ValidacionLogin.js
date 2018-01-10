@@ -1,7 +1,10 @@
 
     $("#submitButton").click(function(e) {
+        alert('1_Inicio');
         var u = $("#username").val();
         var p = $("#password").val();
+        alert('Varriables '+u+' '+p);
+        var texto = null;
 
         p = p.replace(/\s/g, ""); 
         u = u.replace(/\s/g, "");
@@ -31,6 +34,8 @@
 
         }  else {
 
+        alert('2_Sin vacios');
+
         $.ajax({
         url: "http://www.herbariodigital.xyz/AppMovil/php/existencia.php",
         type: "post", 
@@ -38,6 +43,7 @@
             username: u, 
         },
         success: function(response) {
+            alert('3_ Correo Existe')
             if (response == 0){
                 alert('Correo inexistente');
                 return false;
@@ -50,6 +56,7 @@
                     password: p,
                   },
                   success: function(textresponse) {
+                    alert('4_Logueo');
                     respuesta = JSON.parse(textresponse);
 
                     if (respuesta.length == 0) {
@@ -71,6 +78,7 @@
         },
         error: function(xhr) {
             alert(xhr);
+            alert('ERROR 1s');
             return false;
         }
     });
