@@ -35,12 +35,20 @@
             var ids = id[i];
 
             //$('#lista').append($('<li>').text(named));
+
+            var spans = $("<span></span>");
+            spans.html(place);
+            spans.css("font-style","italic");
+
             var span = $("<span></span>");
-            span.html(place + ' · ' + date);
+            span.html(date);
             span.css("font-style","italic");
+
             
             var img = $("<img/>");
             img.attr("src","location.png");
+            img.css('height','50px');
+            img.css('width','50px');
 
             var a = $("<a></a>");
             a.addClass("widget-list-link");
@@ -54,6 +62,7 @@
             li.append(a);
             a.append(img);
             a.append(span);
+            a.append(spans);
 
         }
     }

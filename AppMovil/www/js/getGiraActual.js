@@ -1,6 +1,62 @@
-    function getGiraInfo(){
+function estatico(){
+            var img = $('<img></img>');
+            img.css('position', 'absolute');
+            img.css('height', '20px');
+            img.css('width', '20px');
+            img.css('right', '10px');
+            img.attr('src', 'volver.png');
+
+            var a1 = $('<a></a>');
+
+            var img1 = $('<img/>');
+            img1.css('position', 'absolute');
+            img1.css('height','24px');
+            img1.css('width','24px');
+            img1.css('left','10px');
+            img1.attr('src','person.png');
+
+            var a2 = $('<a></a>');
+            a2.attr('href','../index.html');
+
+            var img2 = $('<img/>');
+            img2.css('position', 'absolute');
+            img2.css('height','20px');
+            img2.css('width','20px');
+            img2.css('right','10px');
+            img2.attr('src','out.png');
+
+            var h3 = $('<h3></h3>');
+            h3.attr('align', 'center');
+            h3.css("font-family","Gill Sans, sans-serif");
+            h3.html('Gira Actual');
+
+            $('#encabezado').append(h3);
+            h3.append(a1);
+            a1.append(img1);
+            h3.append(a2);
+            a2.append(img2);
+
+}
+
+
+function getGiraActual(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            	if (this.responseText != null){
+            		localStorage.GiraElecta = this.responseText;
+                	getGiraInfo(this.responseText);
+            	}
+            }
+        };
+        xmlhttp.open("GET", "http://herbariodigital.xyz/AppMovil/php/getGiraActual.php", true);
+        xmlhttp.send();
+    }
+
+
+function getGiraInfo(ID){
                 $.ajax({
-                  url: "http://www.herbariodigital.xyz/AppMovil/php/getGiraInfo.php?id="+localStorage.GiraElecta,
+                  url: "http://www.herbariodigital.xyz/AppMovil/php/getGiraInfo.php?id="+ ID,
                   type: "get", //send it through get method
 
                   success: function(textresponse) {
@@ -17,34 +73,15 @@
                 });
               }
 
-    function addInfo(fecha, nombre, profesor, lugar){
-            
-            var img = $('<img></img>');
-            img.css('position', 'absolute');
-            img.css('height', '20px');
-            img.css('width', '20px');
-            img.css('right', '10px');
-            img.attr('src', 'volver.png');
 
-            var a = $('<a></a>');
-            a.attr('href','../gira/gira.html');
-
-            var h3 = $('<h3></h3>');
-            h3.attr('align', 'center');
-            h3.css("font-family","Gill Sans, sans-serif");
-            h3.html(nombre);
-
-            $('#encabezado').append(h3);
-            h3.append(a);
-            a.append(img);
-
+function addInfo(fecha, nombre, profesor, lugar){
 
             var h5_1 = $("<h5></h5>");
             h5_1.attr('align','center');
             h5_1.css('font-family','Gill Sans, sans-serif');
             h5_1.css('background-color', '#41A4A4');
             h5_1.css('color','white');
-            h5_1.html('Profesor: ' + profesor);
+            h5_1.html('Profesor(a): ' + profesor);
 
             var h5_2 = $("<h5></h5>");
             h5_2.attr('align','center');
@@ -63,10 +100,24 @@
             $('#infoGira').append(h5_1);
             $('#infoGira').append(h5_2);
             $('#infoGira').append(h5_3);
+
+            var ab = $('<a></a>');
+            ab.attr('href','../ListaEspecies/ListaEspecies.html');
+            ab.css('font-size','13px');
+            ab.css('font-family','Gill Sans, sans-serif');
+            ab.css('color','#FFFFFF');
+            ab.css('text-decoration','none');
+            ab.html('AGREGAR')
+
+            $('#butonplace').append(ab);
+
+            getGiraEspecies();
+
     }
 
 
-    function getGiraEspecies(){
+
+function getGiraEspecies(){
                 $.ajax({
                   url: "http://www.herbariodigital.xyz/AppMovil/php/getGiraEspecie.php?id_persona="+localStorage.id+"&id_gira="+localStorage.GiraElecta,
                   type: "get", //send it through get method
@@ -210,7 +261,3 @@
         xmlhttp.open("GET", "http://www.herbariodigital.xyz/AppMovil/php/setEstadoFavorito.php?id="+id_m+'&num='+num, true);
         xmlhttp.send();
     }
-
-
-
-            
