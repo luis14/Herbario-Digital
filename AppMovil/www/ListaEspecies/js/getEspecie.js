@@ -31,12 +31,16 @@
             var imagen = imge[i];
 
             //$('#lista').append($('<li>').text(named));
+            var br = $("<br>");
+
             var span = $("<span></span>");
             span.html(science);
             span.css("font-style","italic");
             
             var img = $("<img/>");
             img.attr("src",imagen);
+            img.css('height','50px');
+            img.css('width','50px');
 
             var a = $("<a></a>");
             a.addClass("widget-list-link");
@@ -50,6 +54,7 @@
             li.append(a);
             a.append(img);
             a.append(span);
+            a.append(br);
 
         }
     }

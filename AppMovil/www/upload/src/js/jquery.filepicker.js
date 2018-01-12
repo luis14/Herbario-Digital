@@ -100,6 +100,7 @@
       var fileNames = $(files).map(function() {
         return this.name;
       }).get();
+      alert('Names ' + fileNames);
       $(input).prop('value', fileNames.join(", "));
     }
     
@@ -183,10 +184,9 @@
     }
   
     function init() {
-    
+      alert('IN');
       var value = $element.attr('value');
       var values = value ? value.split(",") : [];
-
       files = $(values).map(function() {
         var filename = getFilename(this);
         var fileExtension = getFileExtension(this);
@@ -202,7 +202,6 @@
       renderPreview.call(this);
       layout.call(this);
       update.call(this);
-      
     }
     
     
@@ -257,7 +256,8 @@
   $.fn[pluginName].getStyle = function(name) {
     return _styles[name];
   };
-  
-  
 
 }( jQuery, window );
+
+
+

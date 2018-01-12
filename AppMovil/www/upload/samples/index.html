@@ -28,7 +28,9 @@
          });
          
        });
+
     </script>
+
     
     <style>
 
@@ -128,7 +130,7 @@
             </h4>
           </div>
           <div id="collapse1" class="panel-collapse collapse" style ="margin-top: 15px;">
-           <input data-label="Cargar Fotos" class="filepicker-bootstrap" type="file" multiple="multiple"/>
+           <input id='bttnfoto' data-label="Cargar Fotos" class="filepicker-bootstrap" type="file" multiple="multiple"/>
           </div>
       </div>  
     </div>
@@ -157,16 +159,17 @@
         }
     </script>
 
-  <div id='time' style ="background-color: #267c71; height: 50px; width:100%; margin-bottom: 3px; display:inline-block; position:relative; color: white; text-align: center;">
+  <div id='time' style ="background-color: #267c71; height: 62px; width:100%;margin-bottom: 7px; display:inline-block; position:relative; color: white; text-align: center; padding: 10px; font-weight: bold;">
 
 
   </div>
 
   <script>
     var today = new Date();
-    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var dateTime = date+' '+time;
+    var dateTime = date+'    '+time;
+    $('#time').html('HORA ACTUAL <br>');
     $('#time').append(dateTime);
   </script>
 
@@ -234,7 +237,7 @@
     
     
     <a href="../../registro/registro.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
-      <button class="bttn"> Finalizar </button>
+      <button id='bttnsnd' class="bttn"> Finalizar </button>
     <a>
 
   </body>

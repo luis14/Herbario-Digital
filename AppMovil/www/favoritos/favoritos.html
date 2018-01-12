@@ -10,9 +10,10 @@
   		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   		<script src="../js/funcionesRegistro.js"></script>
+  		<script src="../js/getFavoritos.js"></script>
 	</head>
 
-	<body>		
+	<body onload="getFavoritos();">		
 		<div class="get-in-touch-head">
 			<h3 align = "center" style="font-family:Gill Sans, sans-serif"> Favoritos
 				<a>
@@ -28,51 +29,7 @@
 		<!-- EL CICLO DE LAS ESTRELLAS ES DE 57 EN 57 -->
 
 
-		<ol class="widget-list">
-		      
-		      <li>
-		        <a class="widget-list-link" href="../perfilFav/perfil.html">
-		          <img src="flor.png">
-		          Jocote <span style="active; font-style: italic;"> nombreacus centificus </span>
-		        </a>
-
-		        <div class="click" id ='ss1' style="position:absolute; right:0; top: 65px; z-index:1;">
-					<span id = 's1' class="fa fa-star-o"></span>
-				</div>
-		      </li>
-
-		      <li>
-		        <a class="widget-list-link" href="../perfilFav/perfil.html">
-		          <img src="flor.png">
-		          Girasol <span style="font-style: italic;"> nombreacus centificus </span>
-		        </a>
-		        <div class="click" id='ss2' style="position:absolute; right:0; top: 122px; z-index:1;">
-					<span id='s2' class="fa fa-star-o"></span>
-					
-
-				</div>
-		      </li>
-		      <li>
-		        <a class="widget-list-link" href ="../perfilFav/perfil.html">
-		          <img src="flor.png">
-		          Jazmin <span style="font-style: italic;"> nombreacus centificus </span>
-		        </a>
-		        <div class="click" id='ss3' style="position:absolute; right:0; top: 179px; z-index:1;">
-					<span id='s3' class="fa fa-star-o"></span>
-					
-				</div>
-		      </li>
-		      <li>
-		        <a class="widget-list-link">
-		          <img src="flor.png">
-		          Jazmin <span style="font-style: italic;"> nombreacus centificus </span>
-		        </a>
-
-		        <div class="click" style="position:absolute; right:0; top: 236px; z-index:1;">
-					<span class="fa fa-star-o"></span>
-					
-				</div>
-		      </li>
+		<ol id='lista' class="widget-list">
 		      
 		</ol>
 		<div style ="font-size: 0.9em; background: background: #21c69d; margin-bottom: 40px;" class="get-in-touch-head">
@@ -128,10 +85,6 @@
 				</div>
 		    </div>
 		</div>
-
-	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script  src="js/index.js"></script>
-
 	</body>
 </html>
 
