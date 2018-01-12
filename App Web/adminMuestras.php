@@ -25,11 +25,19 @@
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
             </div>
             <div class="collapse navbar-collapse" id="navcol-1">
+                <?php
+                session_start();
+                if (!isset($_SESSION['email'] )) {
+                    header("Location: http://herbariodigital.xyz/AppWeb/adminLogin.html");
+                    die();
+                }
+                ?>
                 <ul class="nav navbar-nav navbar-right">
-                    <li role="presentation"><a href="busquedaMuestra.html"> Especies</a></li>
-                    <li role="presentation"><a href="especies.html">Glosario </a></li>
-                    <li class="active" role="presentation"><a href="glosario.html">Muestras </a></li>
-                    <li role="presentation"><a href="contratacion.html">Gestión de Usuarios </a></li>
+                    <li  role="presentation"><a href="adminEspecies.php"> Especies</a></li>
+                    <li role="presentation"><a href="adminGlosario.php">Glosario </a></li>
+                    <li class="active" role="presentation"><a href="adminMuestras.php">Muestras </a></li>
+                    <li role="presentation"><a href="adminUsuario.php">Gestión de Usuarios </a></li>
+                    <li role="presentation"><a href="http://herbariodigital.xyz/AppWeb/assets/php/killSession.php">Cerrar Sesión(<small> <?php echo $_SESSION['email'];?> </small>)</a></li>
                 </ul>
             </div>
         </div>
@@ -138,7 +146,7 @@
                                             <span class="btn btn-default btn-file">
                                                 Browse… <input type="file" id="imgInp" name="imgInp" required>
                                             </span>
-                                            
+
                                         </span>
                                         <input type="text" class="form-control" readonly>
                                     </div>

@@ -11,7 +11,7 @@ function loguearUsuario(pEmail,pPassword){
             jsonAns = JSON.parse(this.responseText);
             if (jsonAns.result == "logged" ) {
             //    $('#modalEliminar').modal('hide');
-                  location.href="http://herbariodigital.xyz/AppWeb/adminEspecies.html";
+                  location.href="http://herbariodigital.xyz/AppWeb/adminEspecies.php";
             }
             else{
 

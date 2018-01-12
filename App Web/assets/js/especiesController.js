@@ -3,6 +3,7 @@
 function loadTabs(){
     loadFamiliaTab();
     loadGeneroTab();
+    loadEspecieTab();
     loadFiltros();
     loadModal();
 }
@@ -18,6 +19,11 @@ function loadModal(){
         }
         else if(clase == "genero"){
             $('input[type="checkbox"].compTableGen:checked').each(function(){
+                listaIDS.push($(this).val());
+            });
+        }
+        else if(clase == "especie"){
+            $('input[type="checkbox"].compTableEsp:checked').each(function(){
                 listaIDS.push($(this).val());
             });
         }
@@ -152,11 +158,7 @@ function loadFamiliaTab(){
 
                         aTag.attr("href","#accordion-1 .item-"+panelCount);
                         aTag.attr("class","title");
-                        aTag.html(myArr[i].nombreFamilia);
-                        var span =  $("<span></span>");
-                        span.attr("class","badge");
-                        span.html(getCountOfFamilias(myArr,famActual));
-                        aTag.append(span);
+                        aTag.html(myArr[i].nombreFamilia+" ("+getCountOfFamilias(myArr,famActual)+")");
                         h4.append(iTag);
                         h4.append(aTag);
                         divCol2.append(h4);
@@ -176,7 +178,7 @@ function loadFamiliaTab(){
                         divPanelBodyCollapsed.attr("class","panel-body panel-hidden");
                         var ulTag = $("<ul></ul>");
                         actualUl = ulTag;
-                        ulTag.attr("class","list-group");
+                        ulTag.attr("class","list-group no-margin-left");
                         var liTag = $("<li></li>");
                         liTag.attr("class","list-group-item");
                         var divRowtag = $("<div></div>");
@@ -389,6 +391,62 @@ function colocarFiltro(listaChecks,nombreFiltro,itemNum){
     </div>
     */
 }
+function loadEspecieTab(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            myArr = JSON.parse(this.responseText);
+            var famActual = "";
+            var tabFamilia = $('#accordion-3');
+            var panelCount = 0;
+            var actualUl = "";
+            if (myArr.length > 0 ) {
+                for (var i = 0; i < myArr.length; i++) { ////	especieID	nombreComun	nombreCientifico	img	procedencia	ubicacion	posicionHoja	formaHoja	florColor	florSimetria	saviaColor	saviaTextura
+                        panelCount +=1;
+                        var divPanel = $("<div></div>");
+                        divPanel.attr("class","panel panel-default panel-list "+quitarEspacios(myArr[i].ubicacion)+" "+quitarEspacios(myArr[i].procedencia)+" "+quitarEspacios(myArr[i].posicionHoja)+" "+quitarEspacios(myArr[i].formaHoja)+" "+quitarEspacios(myArr[i].florColor)+" "+quitarEspacios(myArr[i].florSimetria)+" "+quitarEspacios(myArr[i].saviaColor)+" "+quitarEspacios(myArr[i].saviaTextura));
+                        var divPanelHeading = $("<div></div>");
+                        divPanelHeading.attr("class","panel-heading panel-heading-line-bottom");
+                        var divRow = $("<div></div>");
+                        divRow.attr("class","row");
+                        var divCol1 =  $("<div></div>");
+                        divCol1.attr("class","col-lg-1 col-md-1 col-sm-1 col-xs-1");
+                        divCol1.attr("style","width:4.166666665%");
+                        var input = $("<input/>");
+                        input.attr("type","checkbox");
+                        input.attr("class","compTableEsp");
+                        input.attr("value",myArr[i].especieID);
+                        var divCol2 =  $("<div></div>");
+                        divCol2.attr("class"," col-lg-11 col-md-11 col-sm-11 col-xs-11 no-padding");
+                        var h4 = $("<h4></h4>");
+                        h4.attr("class","panel-title");
+                        var aTag = $("<a></a>");
+                        aTag.attr("href","http://herbariodigital.xyz/AppWeb/fichaBotanica.php?id="+myArr[i].especieID);
+                        aTag.attr("class","title");
+                        aTag.html(myArr[i].nombreCientifico+" ("+myArr[i].nombreComun+")");
+                        h4.append(aTag);
+                        divCol2.append(h4);
+                        divCol1.append(input);
+                        divRow.append(divCol1);
+                        divRow.append(divCol2);
+                        divPanelHeading.append(divRow);
+                        divPanel.append(divPanelHeading);
+                        tabFamilia.append(divPanel);
+                  }
+
+            }
+
+        }
+        $("#spinEspecies").hide();
+
+            $('input[type="checkbox"].compTableEsp').click(function(){
+                selectEspecieToCompare($(this));
+            });
+    };
+
+    xmlhttp.open("GET", "http://herbariodigital.xyz/AppWeb/assets/php/getListaEspecies.php?criterioBusqueda=all", true);
+    xmlhttp.send();
+}
 function loadGeneroTab(){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -437,11 +495,7 @@ function loadGeneroTab(){
 
                         aTag.attr("href","#accordion-2 .item-"+panelCount);
                         aTag.attr("class","title");
-                        aTag.html(myArr[i].nombreGenero);
-                        var span =  $("<span></span>");
-                        span.attr("class","badge");
-                        span.html(getCountOfGeneros(myArr,famActual));
-                        aTag.append(span);
+                        aTag.html(myArr[i].nombreGenero+" ("+getCountOfGeneros(myArr,famActual)+")");
                         h4.append(iTag);
                         h4.append(aTag);
                         divCol2.append(h4);
@@ -461,7 +515,7 @@ function loadGeneroTab(){
                         divPanelBodyCollapsed.attr("class","panel-body panel-hidden");
                         var ulTag = $("<ul></ul>");
                         actualUl = ulTag;
-                        ulTag.attr("class","list-group");
+                        ulTag.attr("class","list-group no-margin-left");
                         var liTag = $("<li></li>");
                         liTag.attr("class","list-group-item");
                         var divRowtag = $("<div></div>");
@@ -536,13 +590,13 @@ function loadGeneroTab(){
 
         }
         $("#spinGenero").hide();
-            $(".selectableGenero").on("click",function (e) {
-              if($(this).find("i").attr('class') == "glyphicon glyphicon-chevron-right"){
-                  $(this).find("i").removeClass().addClass("glyphicon glyphicon-chevron-down");
-              }else{
-                  $(this).find("i").removeClass().addClass("glyphicon glyphicon-chevron-right");
-              }
-            });
+        $(".selectableGenero").on("click",function (e) {
+          if($(this).find("i").attr('class') == "glyphicon glyphicon-chevron-right"){
+              $(this).find("i").removeClass().addClass("glyphicon glyphicon-chevron-down");
+          }else{
+              $(this).find("i").removeClass().addClass("glyphicon glyphicon-chevron-right");
+          }
+        });
             $('input[type="checkbox"].compTableGen').click(function(){
                 selectGeneroToCompare($(this));
             });
@@ -573,7 +627,11 @@ function selectFamiliaToCompare(checkedBox){
     $('input[type="checkbox"].compTableGen:checked').each(function(){
         $(this).attr("checked",false);
     })
+    $('input[type="checkbox"].compTableEsp:checked').each(function(){
+        $(this).attr("checked",false);
+    })
     $("#btnModalTable").removeClass("genero");
+    $("#btnModalTable").removeClass("especie");
     $("#btnModalTable").addClass("familia");
     if($('input[type="checkbox"].compTableFam:checked').length < 2){
         $("#btnModalTable").attr("disabled",true);
@@ -589,13 +647,38 @@ function selectFamiliaToCompare(checkedBox){
 function selectGeneroToCompare(checkedBox){
     $('input[type="checkbox"].compTableFam:checked').each(function(){
         $(this).attr("checked",false);
-    })
+    });
+    $('input[type="checkbox"].compTableEsp:checked').each(function(){
+        $(this).attr("checked",false);
+    });
     $("#btnModalTable").removeClass("familia");
+    $("#btnModalTable").removeClass("especie");
     $("#btnModalTable").addClass("genero");
     if($('input[type="checkbox"].compTableGen:checked').length < 2){
         $("#btnModalTable").attr("disabled",true);
     }
     else if($('input[type="checkbox"].compTableGen:checked').length > 5){
+        $("#btnModalTable").attr("disabled",true);
+        checkedBox.attr("checked",false);
+    }
+    else{
+        $("#btnModalTable").attr("disabled",false);
+    }
+}
+function selectEspecieToCompare(checkedBox){
+    $('input[type="checkbox"].compTableFam:checked').each(function(){
+        $(this).attr("checked",false);
+    });
+    $('input[type="checkbox"].compTableGen:checked').each(function(){
+        $(this).attr("checked",false);
+    });
+    $("#btnModalTable").removeClass("familia");
+    $("#btnModalTable").removeClass("genero");
+    $("#btnModalTable").addClass("especie");
+    if($('input[type="checkbox"].compTableEsp:checked').length < 2){
+        $("#btnModalTable").attr("disabled",true);
+    }
+    else if($('input[type="checkbox"].compTableEsp:checked').length > 5){
         $("#btnModalTable").attr("disabled",true);
         checkedBox.attr("checked",false);
     }
