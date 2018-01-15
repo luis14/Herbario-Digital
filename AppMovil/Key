@@ -1,0 +1,22 @@
+$ keytool -genkey -v -keystore BitacoraDigital.keystore -alias BitacoraDigital -keyalg RSA -keysize 2048 -validity 10000
+Enter keystore password:  tec1234
+Re-enter new password:  tec1234
+What is your first and last name?
+  [Unknown]:  Luis Rojas
+What is the name of your organizational unit?
+  [Unknown]:  TEC
+What is the name of your organization?
+  [Unknown]:  TEC
+What is the name of your City or Locality?
+  [Unknown]:  TEC
+What is the name of your State or Province?
+  [Unknown]:  TEC
+What is the two-letter country code for this unit?
+  [Unknown]:  TEC
+Is CN=Luis Rojas, OU=TEC, O=TEC, L=TEC, ST=TEC, C=TEC correct?
+  [no]:  Y
+
+
+(RETURN if same as keystore password):  tec1234
+Re-enter new password: tec1234
+[Storing BitacoraDigital.keystore]

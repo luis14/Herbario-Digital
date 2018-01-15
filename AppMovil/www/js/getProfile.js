@@ -78,7 +78,7 @@
 
         var a_3 = $('<a></a>');
         a_3.attr('align','center');
-        a_3.attr('href', '../ventanaGira/ventanagira.html');
+        a_3.attr('href', localStorage.LastHTML);
 
 
         var img_3 = $('<img/>');

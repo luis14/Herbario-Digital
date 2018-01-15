@@ -68,7 +68,7 @@
 
             var a = $("<a></a>");
             a.addClass("widget-list-link");
-            a.attr("href","../perfilFav/perfil.html");
+            a.attr("href","../perfilGira/perfil.html");
             a.html(named);
 
             var span2 = $("<span></span>");
@@ -123,6 +123,7 @@
     $(document).on('click','li',function(){
         x = $(this).attr('id');
         localStorage.MuestraID = x;
+        localStorage.LastHTML = '../favoritos/favoritos.html'
     });
 
     $(document).on('click','span',function(){
