@@ -105,7 +105,8 @@
                      contrasena: contrasena,
                   },
                   success: function(response) {
-                    window.location.replace("registro/registro.html");
+                  	alert('Registro Exitoso');
+                    window.location.replace("index.html");
                   },
                   error: function(xhr) {
                     alert('Error al registrar')
