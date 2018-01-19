@@ -376,7 +376,7 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default" type="button" data-dismiss="modal">Cancelar </button>
-                    <button class="btn btn-primary" type="submit">Guardar cambios</button>
+                    <button class="btn btn-primary" type="submit">Agregar</button>
                 </div>
                 </form>
             </div>
