@@ -248,6 +248,7 @@ function getGiraEspecies(){
     $(document).on('click','li',function(){
         x = $(this).attr('id');
         localStorage.MuestraID = x;
+        localStorage.LastHTML = "../registro/registro.html"
     });
 
 

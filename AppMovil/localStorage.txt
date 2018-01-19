@@ -1,8 +1,15 @@
 LOCAL STORAGE
 
 
-localStorage.plantaNueva // Planta que se va a registrar
+localStorage.plantaNueva // ID Planta que se va a registrar
+
 localStorage.id // ID del usuario en sesion actual
+
 localStorage.username // Nombre real del usuario en sesion
+
 localStorage.GiraElecta // Gira en la que se encuentra el usuario
-localStorage.MuestraID // MID de una muestra en un gira 
+
+localStorage.MuestraID // MID de una muestra en un gira
+
+localStorage.LastHTML // Para el perfil. Al hacer atrás redirecciona a la par que 
+		      // corresponde 

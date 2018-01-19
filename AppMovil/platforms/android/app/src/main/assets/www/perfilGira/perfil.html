@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+  <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  <link rel="stylesheet" type="text/css" href="css/tab.css" />
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+  <script src="js/modernizr.custom.17475.js"></script>  
+
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+  <script src="../js/getProfile.js"></script>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+  <script type="text/javascript" src="js/gallery.js"></script>
+
+</head>
+<body onload="getProfile();">
+      <style>
+        .es-carousel ul{
+          display:block;
+        }
+      </style>
+    </noscript>
+
+
+    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">  
+      <div class="rg-image-wrapper">
+        {{if itemsCount > 1}}
+          <div class="rg-image-nav">
+          </div>
+        {{/if}}
+        
+        <div class="rg-image"></div>
+        <div class="rg-caption-wrapper">
+          <div class="rg-caption" style="display:none;">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </script>
+
+     <div class="footer" style ="z-index:2;">
+        <div  id = 'heads' class="footer_contents">
+          
+        
+        </div>
+      </div>
+
+
+
+
+    <div id='contenido' class="content">
+        <div id="rg-gallery" class="rg-gallery">
+            <div class="es-carousel-wrapper">
+              <div class="es-nav">
+                <span class="es-nav-prev">Previous</span>
+                <span class="es-nav-next">Next</span>
+              </div>
+
+              <div class="es-carousel">
+                <ul id='lista'>
+
+                </ul>
+              </div>
+            </div>
+          </div><!-- rg-thumbs -->
+        </div><!-- rg-gallery -->
+      </div><!-- content -->
+    </div><!-- container -->
+
+
+
+    <div class="caract" style ="z-index:2; margin-bottom: 8px">
+        <div id='recolectainfo' class="footer_contents">
+
+        </div>
+      </div>
+
+
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">Fuste</label>
+    
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Hoja</label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3">Fruto</label>
+    
+  <input id="tab4" type="radio" name="tabs">
+  <label for="tab4">Flor</label>
+
+  <input id="tab5" type="radio" name="tabs">
+  <label for="tab5">Extra</label>
+    
+  <section id="content1"> </section>
+    
+  <section id="content2"> </section>
+    
+  <section id="content3"> </section>
+    
+  <section id="content4"> </section>
+
+  <section id="content5">  </section>
+
+  
+  <style type="text/css">
+
+
+      .footer {
+            background: #38B75C;
+            height:60px;
+            width: 100%; // Don't change
+            position: fixed;
+            opacity: 0.9;
+      }
+
+      .caract {
+            background: #15b2d8;
+            height: 7em;
+            width: 100%; // Don't change
+            position: fixed;
+            opacity: 0.9;
+            overflow: hidden;
+      }   
+
+
+      .footer_contents {
+            height:24px; 
+            margin:auto;
+      }
+
+      .colm{
+        float: left;
+        width: 20%;
+      }
+
+      .column {
+            float: left;
+            width: 60%;
+      }
+
+      .column2 {
+            float: left;
+            width: 66.66%;
+      }
+
+      .column3 {
+            float: left;  
+            width: 50%;
+            text-align: center;
+            padding: 1em 0;
+            background: #15b2d8;
+            text-align: center;
+      }
+                
+    </style>
+    
+  
+  
+</body>
+</html>

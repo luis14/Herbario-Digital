@@ -100,7 +100,6 @@
       var fileNames = $(files).map(function() {
         return this.name;
       }).get();
-      alert('Names ' + fileNames);
       $(input).prop('value', fileNames.join(", "));
     }
     
@@ -112,11 +111,13 @@
       
       // Loop through the FileList and render image files as thumbnails.
       $(files).each(function() {
+
         if (!this.type.match('image.*')) {
           return;
         }
-        var $thumbnail = $('<img src="' + this.src + '" title="' + this.name + '" style="max-width: 100%; height: auto"/>' +
+        var $thumbnail = $('<img name="'+ this.name + '" src="' + this.src + '" title="' + this.name + '" style="max-width: 100%; height: auto"/>' +
           '<textarea> Agregar descripción </textarea>');
+        //alert('My name is ' + this.name)
         $preview.append($thumbnail);
         
         var renderStyle = true;
@@ -184,7 +185,6 @@
     }
   
     function init() {
-      alert('IN');
       var value = $element.attr('value');
       var values = value ? value.split(",") : [];
       files = $(values).map(function() {

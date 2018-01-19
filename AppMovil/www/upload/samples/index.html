@@ -4,8 +4,8 @@
     <meta charset="utf-8"/>
     
     <link rel="stylesheet" type="text/css" href="../../css/elastislide.css" />
-  <link rel="stylesheet" type="text/css" href="../../css/custom.css" />
-  <link rel="stylesheet" type="text/css" href="../../css/tab.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/tab.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">  
@@ -16,11 +16,13 @@
     <script src="jquery.example.js"></script>
     <script src="../../mugen.js/src/mugine.js"></script>
     <script src="../src/js/jquery.filepicker.js"></script>
+    <script src="../src/js/getEspeciePorRegistrar.js"></script>
+    
     <link rel="stylesheet" href="../src/css/filepicker.default.css">
     
     
     <script>
-    
+       getEspeciePorRegistrar();
        $(document).ready(function() {
        
          $("input[type='file'].filepicker-bootstrap").filepicker({
@@ -101,47 +103,46 @@
   </head>
   
   <body>
-      <div class="footer" style ="z-index:2;">
-        <div class="footer_contents">
-          <div class="colm" align = "center"> 
-          <a align = "center">
-            <img align = "center" style ="margin: 5px; position: relative; height: 30px; width: 32px; top: 10px;" src="flor.png"/>
-          </a>
-        </div>
-        <div class="column" align = "center"> 
-          <H4 color ="white" style ='position: relative; color: white;font-family: "Times New Roman", Georgia, Serif;'> Jocote </H4>
-          <H6 color ="white" style ='position: relative; color: white;font-family: "Times New Roman", Georgia, Serif;''> Satordiporea Omniverea </H6>
-        </div>
-        <div class="colm" align="center">
-          <a align="center" href="../../registro/registro.html">
-            <img align="center" style="margin: 5px; position: relative; height: 28px; width: 28px; top: 10px;" src="volver.png" />
-            <a>
-        </div>
-        <div class="colm" align = "center"></div>
+
+
+   <form id="uploadItem" method="post" enctype="multipart/form-data">
+
+
+    <input type="hidden" name="comun" id="comun"/>
+    <input type="hidden" name="cientifico" id="cientifico"/>
+    <input type="hidden" name="planta" id="planta"/>
+    <input type="hidden" name="persona" id="persona"/>
+    <input type="hidden" name="gira" id="gira"/>
+
+
+      <div id="heads" class="footer" style ="z-index:2;">
       </div>
-    </div>
 
 
     <div class="container" style ="background:#000">
       <div class="row">
-          <div class="panel-heading" style='background: #BED65C; display: flex; align-items: center; justify-content: center; flex-basis: 17%; height: 27px; margin: 1em; border-radius: 3px;''>
+          <div class="panel-heading" style='background: rgb(30,205,151); display: flex; align-items: center; justify-content: center; flex-basis: 17%; height: 27px; margin: 1em; border-radius: 3px; color: rgba(255,255,255,1);'>
             <h4 class="panel-title" style = "">
-              <a data-toggle="collapse" href="#collapse1" style='font-family: "Gill Sans", sans-serif; font-size: 15px;'><img src="arrow.png" style="max-width: 22px; max-height: 22px;"/> Cargar fotos </a>
+              <a data-toggle="collapse" class ='bttn' href="#collapse1" style='font-family: "Gill Sans", sans-serif; font-size: 15px;'> Cargar fotos </a>
             </h4>
           </div>
           <div id="collapse1" class="panel-collapse collapse" style ="margin-top: 15px;">
-           <input id='bttnfoto' data-label="Cargar Fotos" class="filepicker-bootstrap" type="file" multiple="multiple"/>
+           <input name='bttnfoto[]' id='bttnfoto' data-label="Cargar Fotos" class="filepicker-bootstrap" type="file" multiple/>
           </div>
       </div>  
     </div>
 
   <div style ="background-color: #267c71; height: 93px; width:100%; display:inline-block; position:relative;"> 
-    <textarea id ="local" style ="height: 60px; margin-top:10px;"> Locación </textarea>
-    <button class="bttn" style="height: 20px; background: rgb(0,153,204); border: 2px solid rgb(0,109,146); -webkit-border-radius: 4px;
+  
+    <textarea id ="local" name ="local" style ="height: 60px; margin-top:10px;"> Locación </textarea>
+    
+    <button class="bttn" type='button' style="height: 20px; -webkit-border-radius: 4px;
         border-radius: 4px; position:absolute; bottom:1px; right:10px; width: 25%;" onclick="getLocation()"> Localizar </button>
+
   </div>
 
-  <script>
+
+    <script>
         var x = document.getElementById("local");
 
         function getLocation() {
@@ -159,49 +160,38 @@
         }
     </script>
 
-  <div id='time' style ="background-color: #267c71; height: 62px; width:100%;margin-bottom: 7px; display:inline-block; position:relative; color: white; text-align: center; padding: 10px; font-weight: bold;">
 
-
-  </div>
-
-  <script>
-    var today = new Date();
-    var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var dateTime = date+'    '+time;
-    $('#time').html('HORA ACTUAL <br>');
-    $('#time').append(dateTime);
-  </script>
+    <input type='hidden' name='time' id='time'>
 
     
   <section id="content1">
     <p align="center" style="text-align: center;"> OBSERVACIONES SOBRE EL FUSTE</p>
-    <textarea id = 'fuste' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
+    <textarea id ='fuste' name='fuste' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
     </textarea>
   </section>
     
   <section id="content2">
     <p align="center" style="text-align: center;"> OBSERVACIONES SOBRE LA HOJA</p>
-    <textarea id = 'hoja' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
+    <textarea id='hoja' name='hoja' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
     
     </textarea>
   </section>
     
   <section id="content3">
     <p align="center" style="text-align: center;"> OBSERVACIONES SOBRE LA SEMILLA</p>
-    <textarea id = 'semilla' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
+    <textarea id='semilla' name='semilla' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
     </textarea>
   </section>
     
   <section id="content4" >
    <p align="center" style="text-align: center;"> OBSERVACIONES SOBRE LA FLOR </p>
-    <textarea id = 'flor' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
+    <textarea id='flor' name='flor' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
     </textarea>
   </section>
 
   <section id="content5">
     <p align="center" style="text-align: center;"> OBSERVACIONES EXTRA </p>
-    <textarea id = 'extra' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
+    <textarea id='extra' name='extra' placeholder ="INFO" style ="width: 100%; margin-bottom: 5px; height: 100%; min-height: 150px;">
     </textarea>
   </section>
 
@@ -236,9 +226,9 @@
     </style>
     
     
-    <a href="../../registro/registro.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
-      <button id='bttnsnd' class="bttn"> Finalizar </button>
+    <a  style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+      <button id='bttnsnd' name='bttnsnd' type='submit' class="bttn"> Finalizar </button>
     <a>
-
+    </form>
   </body>
 </html>
